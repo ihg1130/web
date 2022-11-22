@@ -1,0 +1,158 @@
+
+
+.container {
+  height: 100%;
+  background-color: rgb(21, 19, 24);
+}
+.scroll-control {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+.scroll-control span {
+  cursor: pointer;
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin: 10px 0;
+  background-color: rgb(21, 19, 24);
+  opacity: 0.7;
+}
+
+.scroll {
+  width: 100%;
+  background: rgb(21, 19, 24);
+}
+.scroll-control span:hover {
+  opacity: 1;
+}
+@media all and (max-width: 1023px) {
+  .scroll-control span {
+    display: none;
+  }
+}
+
+/* main */
+* {margin: 0; padding: 0;}
+body{font: "돋움체",dotum,"굴림체",gulim; background-color: rgb(21, 19, 24);}
+a{text-decoration: none; color:#eee;}
+li{list-style: none;}
+img{border:none;}
+.cf:after {content:""; clear:both; display:block; }
+.wrap{width:1200px; margin: 0 auto;height: 120px; position: fixed; background:  rgb(21, 19, 24); z-index: 999;}
+html, body{width: 100%; height:100%;}
+
+/* header */
+#header {width:100%; text-align: center;}
+#header .logo {width:300px; height: 100px; float:left;}
+#header .nav {float:right; width:600px;}
+#header .nav ul {width: 1000px;}
+#header .nav > ul > li {float:left; width: 25%; position:relative; margin-top: 40px;}
+#header .nav > ul > li > a {font-weight: bold; }
+#header .nav a {font-size:25px; display: block; }
+#header .nav li {height:40px; line-height: 40px;}
+#header .mainmenu {width: 500px;}
+#header .submenu {width: 100%; height:120px; position:absolute; top:40px; right:0; display: none; background: #eee; z-index:2000;}
+#header .nav > ul > li:hover > a{ background: rgb(21, 19, 24); color:#eee;}
+#header .submenu > li:hover { background: rgb(21, 19, 24); }
+#header .submenu > li:hover > a{color: #fff; font-weight: bold;}
+
+    
+/* slide */
+#slide {width:1200px; height:700px; margin: 0 auto; overflow: hidden; padding-top: 140px;}
+#slide .slide-cont {position: relative; width:1200px; height:700px; }
+#slide .slide-cont img {display: block; width:1200px; height: 700px;}
+#sliden {font-size: 45px; color: white; padding-top: 100px;  font-family: 'Island Moments', cursive;}
+
+
+/* contents */
+#contents {width:1200px; height:100vh; margin: 0 auto;}
+#contents > div {text-align: center;}
+#contents h3 {font-size:17px; margin:10px; padding: 7px; border-top: 1px solid #333; border-bottom: 1px solid #999; background: #eee;}
+#contents h3 span {font-size: 14px; }
+#contents span {text-align: center;}
+#contents a:hover {color:#fff;}
+
+/* cont1 */
+.cont1 {width:100%; height:1000px;   padding-top: 120px;}
+.cont1 p {font-size: 15px;}
+.cont1 ul {margin:15px 10px 0 10px;}
+.cont1 ul li {float: left; width:33.3%; text-align: center;}
+.cont1 ul li img {width:356px; }
+.cont1 ul li img:hover {opacity: 0.6;}
+.cont1 h3 {text-align: center;}
+.cont1 #tb table {width: 1178px;}
+
+/* cont2 */
+.cont2 {width:100%; height:100%px; box-sizing: border-box;   padding-top: 120px;}
+.cont2 ul {margin:15px 10px 0 10px;}
+.cont2 ul li {float: left; width:33.3%; text-align: center;}
+.cont2 ul li img {width:356px; }
+.cont2 ul li img:hover {opacity: 0.6;}
+.cont2 h3 {text-align: center;}
+.cont2 p {font-size: 15px;}
+ 
+/* cont3 */
+.cont3 {width:100%; height:800px; box-sizing: border-box;   padding-top: 120px;}
+.cont3 ul {margin:15px 10px 0 10px;}
+.cont3 ul li {float: left; width:33.3%; text-align: center;}
+.cont3 ul li img {width:250px; }
+.cont3 ul li img:hover {opacity: 0.6;}
+.cont3 h3 {text-align: center;}
+.cont3 p {font-size: 15px;}
+/* footer */
+
+#footer .wrap > div {text-align: center; }
+#footer a {font-size:13px; font-weight: bold; color:rgb(121, 121, 121);}
+
+/* testimg */
+#testImg{
+    position : relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+/* btn */
+.cont1 #tb table tr td button.btn1 {
+    position: absolute;
+    top: 300px;
+    left :130px; 
+    border-radius: 5px;
+    border-radius: 10%;
+    color: pink;
+    border-color: white;
+    background-color: #000;
+    font-size: 15px;
+  }
+  .cont1 #tb table tr td button.btn2 {
+    position: absolute;
+    top: 300px;
+    left :130px; 
+    border-radius: 5px;
+    border-radius: 10%;
+    color: black;
+    border-color: white;
+    background-color: #e9dcca;
+    font-size: 15px;
+   
+  }
+  .cont1 #tb table tr td button.btn3 {
+    position: absolute;
+    top: 300px;
+    left :140px; 
+    border-radius: 5px;
+    color: pink;
+    border-color: white;
+    background-color: #000;
+border-radius: 10%;
+font-size: 15px;
+  }
+
+  #tb{
+    display: flex;
+    margin-right: 14px;
+  }
+
+  
