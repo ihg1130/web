@@ -31,8 +31,10 @@
 		<div class="container">
 			<div id="header" class="cf">
 				<div class="wrap">
-					<div class="logo">
-						<a href="#"><img src="images/logo.png" alt="로고"></a>
+					<div class="slide-cont">
+						<a href="#"><img src="images/jj.jpg" alt="메인이미지1"></a>
+						<a href="#"><img src="images/ka.jpg" alt="메인이미지2"></a>
+            			<a href="#"><img src="images/yy.jpg" alt="메인이미지3"></a>
 					</div>
 					<div class="nav">
 						<ul class="mainmenu">
@@ -66,24 +68,29 @@
 					<p>&nbsp;</p>
 					<p>타투라이프의 다양 서비스를 만나보세요</p>
 					<div class="cf" id="tb">
-						<table border="0" cellpadding="5">
+						<table border="0" >
 							<tr align="center">
 								<td>
-									<div id="testImg"><img alt="상세검색" src="images/상세검색.jpg" /><button class="btn1"
-											type="button" onclick="javascript:sensorBtnClick('btn1');">상세검색하기</button>
-								</td>
+									<div id="testImg"><img alt="부위검색" src="images/상세검색.jpg" /><button class="btn1"
+											type="button" onclick="javascript:sensorBtnClick('btn1');">상세검색</button>
+											<p>
+										</td>
 								<td>
-									<div id="testImg"><img alt="피부과" src="images/피부과.jpg" /><button class="btn2"
-											type="button" onclick="javascript:sensorBtnClick('btn2');">병원리뷰보기</button>
+									<div id="testImg"><img alt="광고문의" src="images/yky.jpg" /><button class="btn2"
+											type="button" onclick="javascript:sensorBtnClick('btn2');">테마검색</button>
+											<p>
 								</td>
+								
 							</tr>
 							<tr>
 								<td>
-									<div id="testImg"><img alt="광고문의" src="images/1k.jpg" /><button class="btn3"
-											type="button" onclick="javascript:sensorBtnClick('btn3');">광고문의하기</button>
+									<div id="testImg"><img alt="피부과" src="images/피부과.jpg" /><button class="btn3"
+											type="button" onclick="javascript:sensorBtnClick('btn3');">병원리뷰</button>
 								</td>
 								<td>
-	
+									<div id="testImg"><img alt="광고문의" src="images/1k.jpg" /><button class="btn4"
+										type="button" onclick="javascript:sensorBtnClick('btn4');">광고문의</button>
+							
 								</td>
 							</tr>
 						</table>
@@ -147,60 +154,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"
 		integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew=="
 		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script>
-		$(document).ready(function () {
-			screenCheck();
-
-			$('.scroll-control .one').click(function () {
-				$.scrollify.move('#s-one');
-			});
-			$('.scroll-control .two').click(function () {
-				$.scrollify.move('#s-two');
-			});
-			$('.scroll-control .three').click(function () {
-				$.scrollify.move('#s-three');
-			});
-			$('.scroll-control .four').click(function () {
-				$.scrollify.move('#s-four');
-			});
-		});
-
-		$(window).on('resize', function () {
-			screenCheck();
-		});
-
-		function applyScroll() {
-			$.scrollify({
-				section: '.scroll',
-				sectionName: 'section-name',
-				//standardScrollElements: 'section',
-				easing: 'easeOutExpo',
-				scrollSpeed: 1100,
-				offset: 0,
-				scrollbars: true,
-				setHeights: true,
-				overflowScroll: true,
-				updateHash: false,
-				touchScroll: true,
-			});
-		}
-
-		function screenCheck() {
-			var deviceAgent = navigator.userAgent.toLowerCase();
-			var agentID = deviceAgent.match(/(iphone|ipod|ipad)/);
-			if (agentID || $(window).width() <= 1024) {
-				// its mobile screen
-				$.scrollify.destroy();
-				$('section').removeClass('scroll').removeAttr('style');
-				$.scrollify.disable();
-			} else {
-				// its desktop
-				$('section').addClass('scroll');
-				applyScroll();
-				$.scrollify.enable();
-			}
-		}
-	</script>
+		<script src="./script/script.js"></script>
 </body>
 
 </html>
