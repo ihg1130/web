@@ -112,46 +112,69 @@ html, body{width: 100%; height:100%;}
 
 
 /* testimg */
-#testImg{
-    position : relative;
-    margin-left: auto;
-    margin-right: auto;
-  }
+#testImg {
+  position: relative;
+
+
+}
+
 /* btn */
 .cont1 #tb table tr td button.btn1 {
-    position: absolute;
-    top: 300px;
-    left :130px; 
-    border-radius: 5px;
-    border-radius: 10%;
-    color: pink;
-    border-color: white;
-    background-color: #000;
-    font-size: 15px;
-  }
-  .cont1 #tb table tr td button.btn2 {
-    position: absolute;
-    top: 300px;
-    left :130px; 
-    border-radius: 5px;
-    border-radius: 10%;
-    color: black;
-    border-color: white;
-    background-color: #e9dcca;
-    font-size: 15px;
-   
-  }
-  .cont1 #tb table tr td button.btn3 {
-    position: absolute;
-    top: 300px;
-    left :140px; 
-    border-radius: 5px;
-    color: pink;
-    border-color: white;
-    background-color: #000;
-border-radius: 10%;
-font-size: 15px;
-  }
+  position: absolute;
+  top: 300px;
+  left: 220px;
+  border-radius: 5px;
+  border-radius: 5%;
+  color: black;
+  border-color: white;
+  background-color: #eee;
+  font-size: 15px;
+  width: 150px;
+  height: 30px;
+}
+
+.cont1 #tb table tr td button.btn2 {
+  position: absolute;
+  top: 300px;
+  left: 220px;
+  border-radius: 5px;
+  border-radius: 5%;
+  color: white;
+  border-color: white;
+  background-color: #000;
+  font-size: 15px;
+  width: 150px;
+  height: 30px;
+
+}
+
+.cont1 #tb table tr td button.btn3 {
+  position: absolute;
+  top: 300px;
+  left: 220px;
+  border-radius: 5px;
+  color: black;
+  border-color: white;
+  background-color: #e9dcca;
+  width: 150px;
+  height: 30px;
+  border-radius: 5%;
+  font-size: 15px;
+}
+
+.cont1 #tb table tr td button.btn4 {
+  position: absolute;
+  top: 300px;
+  left: 220px;
+  border-radius: 5px;
+  color: white;
+  border-color: white;
+  background-color: #000;
+  border-radius: 5%;
+  font-size: 15px;
+  width: 150px;
+  height: 30px;
+}
 
   #tb{
     display: flex;
