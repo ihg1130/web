@@ -15,6 +15,18 @@
 			$('.scroll-control .four').click(function () {
 				$.scrollify.move('#s-four');
 			});
+			$('.logo .one').click(function () {
+				$.scrollify.move('#s-one');
+			});
+			$('.mainmenu .two').click(function () {
+				$.scrollify.move('#s-two');
+			});
+			$('.mainmenu .three').click(function () {
+				$.scrollify.move('#s-three');
+			});
+			$('.mainmenu .four').click(function () {
+				$.scrollify.move('#s-four');
+			});
 		});
 
 		$(window).on('resize', function () {
