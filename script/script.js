@@ -2,19 +2,6 @@
 //100% 주기
 $(document).ready(function () {
 	screenCheck();
-
-	$('.scroll-control .one').click(function () {
-		$.scrollify.move('#s-one');
-	});
-	$('.scroll-control .two').click(function () {
-		$.scrollify.move('#s-two');
-	});
-	$('.scroll-control .three').click(function () {
-		$.scrollify.move('#s-three');
-	});
-	$('.scroll-control .four').click(function () {
-		$.scrollify.move('#s-four');
-	});
 	$('.logo .one').click(function () {
 		$.scrollify.move('#s-one');
 	});
