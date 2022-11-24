@@ -21,23 +21,32 @@ $pw=$_POST['pw'];
 $pw_confirm=$_POST['pw_confirm'];
 $name=$_POST['name'];
 $phone=$_POST['phone'];
-$address=$_POST['address'];
 $email=$_POST['email'];
 $type=$_POST['type'];
-if(strlen($id)!=0 && strlen($pw)!=0 && strlen($pw_confirm)!=0 && strlen($name)!=0 && strlen($phone)!=0 && strlen($address)!=0 && strlen($email)!=0 ){
+if(strlen($id)!=0 && strlen($pw)!=0 && strlen($pw_confirm)!=0 && strlen($name)!=0 && strlen($phone)!=0 && strlen($email)!=0 ){
 if($pw != $pw_confirm){
     errMsg("비밀번호가 일치하지 않습니다.");
 }
-
-$sql = "insert into member (id, pw, pw_confirm, name, phone, address, email, type)";
-$sql = $sql. "values('$id', '$pw', '$pw_confirm', '$name', '$phone', '$address', '$email', '$type')";
+if($type=='tattooist'){
+$sql = "insert into member_t (id, pw, pw_confirm, name, phone, email, type)";
+$sql = $sql. "values('$id', '$pw', '$pw_confirm', '$name', '$phone', '$email', '$type')";
 if($dbcon->query($sql)){                                                             
     echo "<script>alert('회원가입이 완료되었습니다.')</script>";
-    echo "<script>location.href='index.html';</script>";                              
+    echo "<script>location.href='fdfd.html';</script>";                              
    }else{                                                                           
     echo '가입 취소 되었습니다.';                                                            
    }
- 
+}
+else{
+    $sql = "insert into member_n (id, pw, pw_confirm, name, phone, email, type)";
+$sql = $sql. "values('$id', '$pw', '$pw_confirm', '$name', '$phone', '$email', '$type')";
+if($dbcon->query($sql)){                                                             
+    echo "<script>alert('회원가입이 완료되었습니다.')</script>";
+    echo "<script>location.href='fdfd.html';</script>";                              
+   }else{                                                                           
+    echo '가입 취소 되었습니다.';                                                            
+   }
+}
   
   mysqli_close($mysqli);
 }

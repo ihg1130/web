@@ -5,6 +5,7 @@ error_reporting( E_ALL );
 
   $username=$_POST['id'];
   $userpass=$_POST['pw'];
+  $type=$_POST['type'];
 
   $host = "localhost";
   $user = "root";
@@ -14,7 +15,8 @@ error_reporting( E_ALL );
 
   
 // DB 정보 가져오기 
-$sql = "SELECT * FROM member WHERE id ='$username' and pw = '$userpass'";
+if($type=='tattooist'){
+$sql = "SELECT * FROM member_t WHERE id ='$username' and pw = '$userpass'";
 $result = mysqli_query($dbcon, $sql);
 
 $row = $result->fetch_array(MYSQLI_ASSOC);
@@ -31,10 +33,36 @@ if ($username==$row['id'] && $userpass==$row['pw']) {
     echo "<script>location.href='main.html';</script>";
     exit;
  }
- 
+
  //결과가 존재하지 않으면 로그인 실패
  else{
    echo "<script>alert('아이디 또는 패스워드를 틀렸습니다.');history.back();</script>";
     exit;
  }
+}
+else{
+  $sql = "SELECT * FROM member_n WHERE id ='$username' and pw = '$userpass'";
+$result = mysqli_query($dbcon, $sql);
+
+$row = $result->fetch_array(MYSQLI_ASSOC);
+// $row=mysqli_fetch_array($result);
+// echo $row['id'];
+// DB 정보를 가져왔으니 
+// 비밀번호 검증 로직을 실행하면 된다.
+if ($username==$row['id'] && $userpass==$row['pw']) {
+    session_start();
+    $_SESSION['username'] = $row['id'];
+    $_SESSION['name'] = $row['name'];
+    $_SESSION['userpass'] = $row['pw'];
+    echo "<script>alert('로그인 되었습니다.')</script>";
+    echo "<script>location.href='main.html';</script>";
+    exit;
+ }
+
+ //결과가 존재하지 않으면 로그인 실패
+ else{
+   echo "<script>alert('아이디 또는 패스워드를 틀렸습니다.');history.back();</script>";
+    exit;
+ }
+}
 ?>
