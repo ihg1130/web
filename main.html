@@ -9,8 +9,6 @@
 	<title>WebStylePress</title>
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
-	<link rel="stylesheet"
-		href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Island+Moments&display=swap">
@@ -20,7 +18,7 @@
 </head>
 
 <body>
-	
+
 
 	<section class="scroll s-one" data-section-name="s-one">
 		<div class="container">
@@ -34,8 +32,8 @@
 							<li><a class="two">SERVICES</a></li>
 							<li><a class="three">PORTFOLIO</a></li>
 							<li><a class="four">ARTIST</a></li>
-							<li><a href="login.html">LOGIN</a></li>
-							<li><a href="my_page.html">MY PAGE</a></li>
+							<li><a class="five" href="login.html">LOGIN</a></li>
+							<li><a class="six" href="my_page.html">MY PAGE</a></li>
 						</ul>
 					</div>
 				</div>
@@ -54,36 +52,22 @@
 		<div class="container">
 			<div id="contents" class="cf">
 				<div class="cont1">
-					<h1><a href="#">SERVICES</a></h1>
-					<p></p>
+					<h1><a>SERVICES</a></h1>
+					<p>&nbsp;</p>
 					<p>타투라이프의 다양 서비스를 만나보세요</p>
 					<div class="cf" id="tb">
-						<table border="0">
-							<tr align="center">
-								<td>
-									<div id="testImg"><img alt="부위검색" src="images/상세검색.jpg" /><button class="btn1"
-											type="button" onclick="javascript:sensorBtnClick('btn1');">상세검색</button>
-										<p>
-								</td>
-								<td>
-									<div id="testImg"><img alt="광고문의" src="images/yky.jpg" /><button class="btn2"
-											type="button" onclick="javascript:sensorBtnClick('btn2');">테마검색</button>
-										<p>
-								</td>
 
-							</tr>
-							<tr>
-								<td>
-									<div id="testImg"><img alt="피부과" src="images/피부과.jpg" /><button class="btn3"
-											type="button" onclick="javascript:sensorBtnClick('btn3');">병원리뷰</button>
-								</td>
-								<td>
-									<div id="testImg"><img alt="광고문의" src="images/1k.jpg" /><button class="btn4"
-											type="button" onclick="javascript:sensorBtnClick('btn4');">광고문의</button>
+						<img alt="부위검색" src="images/상세검색.jpg" />
+						<button class="btn1" type="button" onclick="javascript:sensorBtnClick('btn1');">상세검색</button>
 
-								</td>
-							</tr>
-						</table>
+						<img alt="광고문의" src="images/yky.jpg" /><button class="btn2" type="button"
+							onclick="javascript:sensorBtnClick('btn2');">테마검색</button>
+
+						<img alt="피부과" src="images/피부과.jpg" /><button class="btn3" type="button"
+							onclick="javascript:sensorBtnClick('btn3');">병원리뷰</button>
+
+						<img alt="광고문의" src="images/1k.jpg" /><button class="btn4" type="button"
+							onclick="javascript:sensorBtnClick('btn4');">광고문의</button>
 					</div>
 				</div>
 			</div>
@@ -94,7 +78,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="cont2">
-					<h1><a href="#">PORTFOLIO</a></h1>
+					<h1><a>PORTFOLIO</a></h1>
 					<p>&nbsp;</p>
 					<p>인기있는 도안을 만나보세요</p>
 					<ul class="cf">
@@ -113,21 +97,21 @@
 		<div class="container">
 			<div class="row">
 				<div class="cont3">
-					<h1><a href="#">ARTIST</a></h1>
+					<h1><a>ARTIST</a></h1>
 					<p>&nbsp;</p>
 					<p>2022년 11월 추천 타투 아티스트를 만나보세요</p>
 					<ul class="cf">
-						<li><img src="./images/gold.png" alt="//" width="50px" height="50px">
+						<li><img src="./images/gold.png" alt="gold" width="50px" height="50px">
 							<br>
 							<p></p>
 							<a href="#"><img src="images/TEAM/1.jpg" alt="팀1" width="250px" height="250px"></a>
 						</li>
-						<li><img src="./images/silver.png" alt="//" width="50px" height="50px">
+						<li><img src="./images/silver.png" alt="silver" width="50px" height="50px">
 
 							<br>
 							<p></p><a href="#"><img src="images/TEAM/2.jpg" alt="팀2" width="250px" height="250px"></a>
 						</li>
-						<li><img src="./images/bronze.png" alt="// " width="50px" height="50px">
+						<li><img src="./images/bronze.png" alt="bronze " width="50px" height="50px">
 
 							<br>
 							<p></p><a href="#"><img src="images/TEAM/3.jpg" alt="팀3" width="250px" height="250px"></a>
@@ -135,7 +119,7 @@
 					</ul>
 					<p>&nbsp;</p>
 					<p>&nbsp;</p>
-					<p>최근 한달간의 자료를 바탕으로 제작된 통계입니다.</p>
+					<p id="j">최근 한달간의 자료를 바탕으로 제작된 통계입니다.</p>
 				</div>
 			</div>
 
@@ -143,10 +127,8 @@
 				<div class="ab">
 					<p>
 						[61099]광주광역시 북구 하서로 85
-						<br>
-						MADE BY HWANG SEON MIN & LIM HYUN KYU
 						<BR>
-						TELL: 062-519-7114  FAX: 062-519-7039
+						TELL: 062-519-7114 FAX: 062-519-7039
 						<BR>
 						COPYRIGHT 2022 BY KOREA POLYTECHNICS. ALL RIGHTS RESERVED.
 					</p>

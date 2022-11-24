@@ -71,7 +71,7 @@ $(document).ready(function () {
 			currentIndex = 0;
 		}
 
-		var slidePosition = currentIndex * (-750) + "px";
+		var slidePosition = currentIndex * (-720) + "px";
 		$(".slide-cont").animate({ top: slidePosition }, 800);
 
 	}, 3000);
@@ -80,7 +80,19 @@ $(document).ready(function () {
 
 }
 );
-
-
+//login.html
+let sf = document.getElementById("searchForm");
+sf.addEventListener("submit", function (e) {
+	let msgEle = document.getElementById("id");
+	let msgEle2 = document.getElementById("pw");
+	if (msgEle.value.length == 0) {
+		alert('아이디 또는 비밀번호를 입력하지 않았습니다');
+		e.preventDefault();
+	}
+	else if (msgEle2.value.length == 0) {
+		alert('아이디 또는 비밀번호를 입력하지 않았습니다');
+		e.preventDefault();
+	}
+});
 
 
