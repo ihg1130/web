@@ -47,7 +47,7 @@
                     </tr>
                     <tr>
                         <td>회원정보</td>
-                        <td>타투이스트</td>
+                        <td><?= $row['type'] ?></td>
                     </tr>
                 </table>
                 <div class="updateBtn">
