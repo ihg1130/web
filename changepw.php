@@ -15,8 +15,6 @@
                 <input type="hidden" name="userid" value="<?= $_GET['id']?>">
                 <p>새 비밀번호 입력 : <input type="pw1"  name="pw1" size="30"></p>
                 <p class="findEmail">새 비밀번호 확인 : <input type="pw2"  name="pw2" size="30"></p>
-                <p><input type="radio"  name="type" id="type" value="tattooist" checked/>타투이스트
-                    <input type="radio"  name="type" id="type" value="noraml"/>일반 회원</p>
                 <div class="findBtn">
                 <input type="submit" value="변경">&nbsp;&nbsp;&nbsp;
                 <input type="button" value="취소" onclick="history.back(1)">

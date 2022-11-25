@@ -14,8 +14,6 @@
             <form action="member_process.php?mode=findid" method="post">
                 <p>이름 : &nbsp;&nbsp;&nbsp;<input type="text"  name="name" placeholder="이름 입력" size="30" required></p>
                 <p class="findEmail">이메일 : <input type="text"  name="email" placeholder="이메일 입력" size="30" required></p>
-                <p><input type="radio"  name="type" id="type" value="tattooist" checked/>타투이스트
-                    <input type="radio"  name="type" id="type" value="noraml"/>일반 회원</p>
                 <div class="findBtn">
                 <input type="submit" value="찾기">&nbsp;&nbsp;&nbsp;
                 <input type="button" value="취소" onclick="history.back(1)">
