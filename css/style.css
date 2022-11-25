@@ -573,7 +573,8 @@ size: 15px;
 }
 
 input.form-control{
-  width: 60%;
+  
+  width: 35%;
   height: 30px;
 }
 input.kkk{
@@ -595,7 +596,7 @@ input.kkkk{
 }
 
 div .mb-3 {
-  margin-left: 550px;
+  margin-left: 750px;
   margin-top: 30px;
   font-size: 15px;
   color: #eee;

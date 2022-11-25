@@ -7,7 +7,7 @@
   
     
   // DB 정보 가져오기 
-  $sql = "SELECT * FROM member_t";
+  $sql = "SELECT * FROM member";
   $result = mysqli_query($dbcon, $sql);
   
   $row = $result->fetch_array(MYSQLI_ASSOC);
@@ -47,7 +47,7 @@
                     </tr>
                     <tr>
                         <td>회원정보</td>
-                        <td><?= $row['type'] ?></td>
+                        <td>타투이스트</td>
                     </tr>
                 </table>
                 <div class="updateBtn">

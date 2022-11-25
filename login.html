@@ -31,7 +31,6 @@
                             <li><a class="three">PORTFOLIO</a></li>
                             <li><a class="four">ARTIST</a></li>
                             <li><a href="login.html">LOGIN</a></li>
-                            <li><a href="my_page.html">MY PAGE</a></li>
                         </ul>
                     </div>
                 </div>
@@ -61,9 +60,24 @@
             </fieldset>
         </form>
     </div>
+<script>
+    let sf = document.getElementById("searchForm");
+sf.addEventListener("submit", function (e) {
+	let msgEle = document.getElementById("id");
+	let msgEle2 = document.getElementById("pw");
+	if (msgEle.value.length == 0) {
+		alert('아이디 또는 비밀번호를 입력하지 않았습니다');
+		e.preventDefault();
+	}
+	else if (msgEle2.value.length == 0) {
+		alert('아이디 또는 비밀번호를 입력하지 않았습니다');
+		e.preventDefault();
+	}
+});
 
+</script>
 
-    <script src="./script/script.js"></script>
+  
 </body>
 
 </html>
