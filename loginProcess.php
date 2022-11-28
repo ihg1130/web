@@ -30,7 +30,7 @@ if ($username==$row['id'] && $userpass==$row['pw']) {
     $_SESSION['name'] = $row['name'];
     $_SESSION['userpass'] = $row['pw'];
     echo "<script>alert('로그인 되었습니다.')</script>";
-    echo "<script>location.href='main1.html';</script>";
+    echo "<script>location.href='main.php';</script>";
     exit;
  }
 
