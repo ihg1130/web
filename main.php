@@ -1,6 +1,6 @@
 <?php
 session_start();
-    ?>
+?>
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -36,22 +36,24 @@ session_start();
 							<li><a class="two">SERVICES</a></li>
 							<li><a class="three">PORTFOLIO</a></li>
 							<li><a class="four">ARTIST</a></li>
-							<?php if(!isset($_SESSION['id'])){
-                                echo "<li><a href='login.php'>LOGIN</a></li>";
-                                }
-                                else{
-                                echo"<li><a href='logoutProcess.php'>LOGOUT</a></li>";
-                                echo"<li><a href='update.php'>MY PAGE</a></li>";
-                                }
-                                ?>
+							<?php if (!isset($_SESSION['id'])) {
+	                            echo "<li><a class='five' href='login.php'>LOGIN</a></li>";
+                            } else {
+	                            echo "<li><a class='five' href='logoutProcess.php'>LOGOUT</a></li>";
+	                            echo "<li><a class='five' href='update.php'>MY PAGE</a></li>";
+                            }
+                            ?>
+						</ul>
 						</ul>
 					</div>
 				</div>
 				<div id="slide">
 					<div class="slide-cont">
-						<a href="#"><img src="images/jj.jpg" alt="메인이미지1"></a>
+						<!-- <a href="#"><img src="images/jj.jpg" alt="메인이미지1"></a>
 						<a href="#"><img src="images/ka.jpg" alt="메인이미지2"></a>
-						<a href="#"><img src="images/yy.jpg" alt="메인이미지3"></a>
+						<a href="#"><img src="images/yy.jpg" alt="메인이미지3"></a> -->
+						<img onmouseover="m1(this)" onmouseout="m2(this)" onclick="m3(this)" src="images/jj.jpg"
+							alt="갈색초록색변경" />
 					</div>
 				</div>
 				<div id="sliden">Well Come To Tattoo Life</div>
@@ -66,18 +68,14 @@ session_start();
 					<p>&nbsp;</p>
 					<p>타투라이프의 다양 서비스를 만나보세요</p>
 					<div class="cf" id="tb">
-
-						<img alt="부위검색" src="images/상세검색.jpg" />
-						<button class="btn1" type="button" onclick="javascript:sensorBtnClick('btn1');">상세검색</button>
-
-						<img alt="광고문의" src="images/yky.jpg" /><button class="btn2" type="button"
-							onclick="javascript:sensorBtnClick('btn2');">테마검색</button>
-
-						<img alt="피부과" src="images/피부과.jpg" /><button class="btn3" type="button"
-							onclick="javascript:sensorBtnClick('btn3');">병원리뷰</button>
-
-						<img alt="광고문의" src="images/1k.jpg" /><button class="btn4" type="button"
-							onclick="javascript:sensorBtnClick('btn4');">광고문의</button>
+						<a href="#"><img src="images/상세검색.jpg" alt="상세검색"></a>
+						<h4 class="text1">상세검색</h4>
+						<a href="#"><img src="images/yky.jpg" alt="테마검색"></a>
+						<h4 class="text2">테마검색</h4>
+						<a href="#"><img src="images/피부과.jpg" alt="병원리뷰"></a>
+						<h4 class="text3">병원리뷰</h4>
+						<a href="#"><img src="images/1k.jpg" alt="광고문의"></a>
+						<h4 class="text4">광고문의</h4>
 					</div>
 				</div>
 			</div>
@@ -153,6 +151,18 @@ session_start();
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"
 		integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew=="
 		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script>
+		function m1(leaf) {
+			leaf.setAttribute('src', 'images/jj.jpg');
+		}
+
+		function m2(leaf) {
+			leaf.setAttribute('src', 'images/yy.jpg');
+		}
+		function m3(leaf) {
+			leaf.setAttribute('src', 'images/ka.jpg');
+		}
+	</script>
 	<script src="./script/script.js"></script>
 </body>
 
