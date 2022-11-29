@@ -1,32 +1,28 @@
 <?php
-    $host = "localhost";
-    $user = "root";
-    $password = "123456";
-    $dbname = "lim";
-    $dbcon = new mysqli($host, $user, $password, $dbname);
-  
-    
-  // DB 정보 가져오기 
-  $sql = "SELECT * FROM member";
-  $result = mysqli_query($dbcon, $sql);
-  
-  $row = $result->fetch_array(MYSQLI_ASSOC);
-  
+error_reporting( E_ALL );
+ini_set( "display_errors", 1 );
 
+session_start();
+require_once("db.php");
+
+$sql = $db -> prepare("SELECT * FROM member WHERE id=:id");
+$sql -> bindParam("id",$_SESSION['id']);
+$sql -> execute();
+$row = $sql -> fetch();
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>my page</title>
 </head>
 <body>
     <section>
         <div class="mainCon">
             <div class="updateTitle">회원정보</div>
-            <form action="changepw.php" method="post">
+            <form action="member_process.php?mode=update" method="post">
                 <input type="hidden" name="id" value="<?= $row['id']?>">
                 <table class="updateTable">
                     <tr>
@@ -35,11 +31,15 @@
                     </tr>
                     <tr>
                         <td>비밀번호</td>
-                        <td>*****</td>
+                        <td><input type="password" name="pw1"></td>
+                    </tr>
+                    <tr>
+                        <td>비밀번호 확인</td>
+                        <td><input type="password" name="pw2"></td>
                     </tr>
                     <tr>
                         <td>전화번호</td>
-                        <td><?= $row['phone'] ?></td>
+                        <td><input type="text" name="phone" placeholder=<?= $row['phone']?>></td>
                     </tr>
                     <tr>
                         <td>이메일</td>
@@ -47,15 +47,16 @@
                     </tr>
                     <tr>
                         <td>회원정보</td>
-                        <td>타투이스트</td>
+                        <td><?= $row['type'] ?></td>
                     </tr>
                 </table>
                 <div class="updateBtn">
-                <input type="submit" value="비밀번호 변경">
+                <input type="submit" value="수정">
                 <input type="button" value="취소" onclick="history.back(1)">
                 </div>
             </form>
         </div>
     </section>
+    <footer></footer>
 </body>
 </html>

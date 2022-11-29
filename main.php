@@ -9,7 +9,7 @@ session_start();
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 	<link rel="stylesheet" href="css/style.css">
-	<title>WebStylePress</title>
+	<title>타투라이프</title>
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">

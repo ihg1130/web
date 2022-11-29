@@ -493,7 +493,7 @@ button {
 
 .loginbox label {
   display: block;
-  font-size: 12px;
+  font-size: 15px;
   color: white;
   margin-bottom: 10px;
   /* 동위선택자와의 간격 조정 */
@@ -537,11 +537,9 @@ button {
 .loginbox a {
   /* 글자관련은 보통 최종태그에 줘야 적용 */
   color: white;
-  font-size: 12px;
-
+  font-size: 15px;
   /* 현재 위치에서 상대적 이동 */
   position: relative;
-  top: -2px;
 }
 
 .loginbox button {

@@ -23,7 +23,7 @@
             <div id="header" class="cf">
                 <div class="wrap">
                     <div class="logo">
-                        <a href="main.html"><img src="images/logo.png" alt="로고"></a>
+                        <a href="main.php"><img src="images/logo.png" alt="로고"></a>
                     </div>
                     <div class="nav">
                         <ul class="mainmenu">
@@ -54,12 +54,12 @@
                 <label for="pw">비밀번호</label>
                 <input type="text" name="pw" id="pw" placeholder="비밀번호를 입력해 주세요">
                 <label for="type">회원 구별</label><br>
-                <input type="radio" name="type" id="type" value="tattooist" checked /><a>타투이스트</a>
+                <input type="radio" name="type" id="type" value="tattooist" checked /><a>타투이스트</a>&nbsp;
                 <input type="radio" name="type" id="type" value="noraml" /><a>일반 회원</a>
                 <ul>
                     <li><a href="findid.php">아이디찾기</a></li>
                     <li><a href="findpw.php">비밀번호찾기</a></li>
-                    <li><a href="sign_up.html">회원가입</a></li>
+                    <li><a href="sign_up.php">회원가입</a></li>
                 </ul>
                 <!--데이터를 서버로 전송-->
                 <button type="submit">로그인</button>

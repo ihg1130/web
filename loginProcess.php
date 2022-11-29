@@ -3,8 +3,8 @@
 error_reporting( E_ALL );
   ini_set( "display_errors", 1 );
 
-  $username=$_POST['id'];
-  $userpass=$_POST['pw'];
+  $id=$_POST['id'];
+  $pw=$_POST['pw'];
   $type=$_POST['type'];
 
   $host = "localhost";
@@ -16,7 +16,7 @@ error_reporting( E_ALL );
   
 // DB 정보 가져오기 
 
-$sql = "SELECT * FROM member WHERE id ='$username' and pw = '$userpass'";
+$sql = "SELECT * FROM member WHERE id ='$id' and pw = '$pw'";
 $result = mysqli_query($dbcon, $sql);
 
 $row = $result->fetch_array(MYSQLI_ASSOC);
@@ -24,13 +24,13 @@ $row = $result->fetch_array(MYSQLI_ASSOC);
 // echo $row['id'];
 // DB 정보를 가져왔으니 
 // 비밀번호 검증 로직을 실행하면 된다.
-if ($username==$row['id'] && $userpass==$row['pw']) {
+if ($id==$row['id'] && $pw==$row['pw']) {
     session_start();
-    $_SESSION['username'] = $row['id'];
+    $_SESSION['id'] = $row['id'];
     $_SESSION['name'] = $row['name'];
-    $_SESSION['userpass'] = $row['pw'];
-    echo "<script>alert('로그인 되었습니다.')</script>";
-    echo "<script>location.href='main.php';</script>";
+    $_SESSION['pw'] = $row['pw'];
+    echo "<script>alert('로그인 되었습니다.');
+    location.replace('main.php');</script>";
     exit;
  }
 

@@ -16,8 +16,6 @@ include "db.php";
 
 switch ($_GET['mode']){
 
-    
-  
     case 'register' :
         $host = "localhost";
     $user = "root";
@@ -41,8 +39,8 @@ if($pw != $pw_confirm){
 $sql = "insert into member (userid, id, pw, pw_confirm, name, phone, email, type)";
 $sql = $sql. "values('$userid', '$id', '$pw', '$pw_confirm', '$name', '$phone', '$email', '$type')";
 if($dbcon->query($sql)){                                                             
-    echo "<script>alert('회원가입이 완료되었습니다.')</script>";
-    echo "<script>location.href='main.html';</script>";                              
+    echo "<script>alert('회원가입이 완료 되었습니다.');
+    location.replace('login.php');</script>";                             
    }else{                                                                           
     echo '가입 취소 되었습니다.';                                                            
    }
@@ -59,16 +57,16 @@ break;
         $id = $_POST['id'];
         $pw1 = $_POST['pw1'];
         $pw2 = $_POST['pw2'];
-        $tel = $_POST['tel'];
+        $phone = $_POST['phone'];
 
-        $stmt = $db -> prepare("SELECT * FROM register WHERE id=:id");
+        $stmt = $db -> prepare("SELECT * FROM member WHERE id=:id");
         $stmt -> bindParam("id",$id);
         $stmt -> execute();
         $user = $stmt -> fetch();
 
-        $sql = $db -> prepare("UPDATE register set pw=:pw, tel=:tel WHERE id=:id");
+        $sql = $db -> prepare("UPDATE member set pw=:pw, phone=:phone WHERE id=:id");
         $sql -> bindParam("pw",$pw1);
-        $sql -> bindParam("tel",$tel);
+        $sql -> bindParam("phone",$tel);
         $sql -> bindParam("id",$id);
 
         if(!$pw1 || !$pw2){
@@ -77,19 +75,19 @@ break;
             errMsg("비밀번호가 일치하지 않습니다.");
         } elseif($pw1 == $user['pw']){
             errMsg("이전 비밀번호와 같습니다.");
-        } elseif (!$tel) {
+        } elseif (!$phone) {
             errMsg("전화번호를 입력해주세요.");
         }
 
         $sql -> execute();
         session_unset();
-        header('location:../main.php');
+        echo "<script>alert('수정 되었습니다. 다시 로그인 해주세요');
+        location.replace('main.php');</script>";
     break;
 
     case 'findid' :
         $name = $_POST['name'];
         $email = $_POST['email'];
-        $type=$_POST['type'];
         $userEmail = array();
         
         $pdo = $db -> prepare("SELECT * FROM member WHERE name=:name");
@@ -129,7 +127,6 @@ break;
     case 'findpw':
                     $id = $_POST['id'];
                     $email = $_POST['email'];
-                    $type=$_POST['type'];
                     
                     $sql = $db -> prepare("SELECT * FROM member WHERE id=:id");
                     $sql -> bindParam("id",$id);
@@ -154,7 +151,6 @@ break;
             $id = $_POST['id'];
             $pw1 = $_POST['pw1'];
             $pw2 = $_POST['pw2'];
-            $type=$_POST['type'];
             
             $stmt = $db -> prepare("SELECT * FROM member WHERE id=:id");
             $stmt -> bindParam("id",$id);
@@ -173,8 +169,9 @@ break;
                 errMsg("사용 불가능한 비밀번호 입니다.");
             } 
             $sql -> execute(); 
+
             echo "<script>  alert('비밀번호가 변경 되었습니다.');
-            location.href='login.html'; </script>";
+            location.href='login.php'; </script>";
         
         break;
 

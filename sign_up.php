@@ -21,7 +21,7 @@
                 <div id="header" class="cf">
                     <div class="wrap2">
                         <div class="logo">
-                            <a href="main.html"><img src="images/logo.png" alt="로고"></a>
+                            <a href="main.php"><img src="images/logo.png" alt="로고"></a>
                         </div>
                         <div class="nav">
                             <ul class="mainmenu">
@@ -76,8 +76,8 @@
                 </div>
                 <div class="mb-3 ">
                     <label for="tattoo" class="form-label">회원 구별<br></label><br>
-                    <input type="radio"  name="type" value="tattooist" checked/>타투이스트
-                    <input type="radio"  name="type" value="general"/>일반 회원
+                    <input type="radio"  name="type" value="타투이스트 회원" checked/>타투이스트
+                    <input type="radio"  name="type" value="일반회원"/>일반 회원
                 </div><br><br>
                 
                 <div align="center">

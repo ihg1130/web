@@ -29,7 +29,7 @@
 }
 
 .writeForm input[type=text]{
-    font-size: 20px;
+    font-size: 40px;
     margin-bottom: 30px;
 }
 
@@ -54,16 +54,21 @@
 <section>
         <div class="mainCon">
             <div class="writeTitle">리뷰 쓰기</div>
-            <form class="writeForm" action="board_process.php?mode=write" method="post">
+            <form class="writeForm" action="board_process.php?mode=write" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="userid" value="review">    
+            <input type="hidden" name="id" value="<?= $_SESSION['id'] ?>">
+            <input type="hidden" name="name" value="<?= $_SESSION['name'] ?>">
                 <p><input class="writeTypeText" type="text" name="title" size="31" placeholder="제목을 입력해주세요" required></p>
                 <textarea class="writeTextarea" name="content" placeholder="본문을 입력해주세요"  required></textarea>
-                <div class="writeBtn">
+                <input type="file" name="image">
+                <div class="writeBtn">   
                 <input type="submit" value="작성">&nbsp;&nbsp;&nbsp;&nbsp;
                 <input type="button" value="취소" onclick="history.back(1)">
                 </div>
             </form>
         </div>
     </section>
+    <footer></footer>
 </body>
 
 </html>
