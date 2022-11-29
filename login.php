@@ -23,7 +23,7 @@
             <div id="header" class="cf">
                 <div class="wrap">
                     <div class="logo">
-                        <a href="main.html"><img src="images/logo.png" alt="로고"></a>
+                        <a href="main.php"><img src="images/logo.png" alt="로고"></a>
                     </div>
                     <div class="nav">
                         <ul class="mainmenu">
