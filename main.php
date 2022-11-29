@@ -2,7 +2,7 @@
 session_start();
     ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
 	<meta charset="utf-8" />
@@ -29,7 +29,7 @@ session_start();
 			<div id="header" class="cf">
 				<div class="wrap">
 					<div class="logo">
-						<a class="one"><img src="images/logo.png" alt="로고"></a>
+						<a class="one" href="main.php"><img src="images/logo.png" alt="로고"></a>
 					</div>
 					<div class="nav">
 						<ul class="mainmenu">
@@ -92,7 +92,7 @@ session_start();
 					<p>&nbsp;</p>
 					<p>인기있는 도안을 만나보세요</p>
 					<ul class="cf">
-						<li><a href="#"><img src="images/1.jpg" alt="포폴1"></a></li>
+						<li><a href="writeReview.php"><img src="images/1.jpg" alt="포폴1"></a></li>
 						<li><a href="#"><img src="images/2.jpg" alt="포폴2"></a></li>
 						<li><a href="#"><img src="images/3.jpg" alt="포폴3"></a></li>
 						<li><a href="#"><img src="images/4.jpg" alt="포폴4"></a></li>
