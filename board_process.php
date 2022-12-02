@@ -107,10 +107,29 @@ include "db.php";
         $num = $_POST['num'];
         $newTitle = $_POST['title'];
         $newcontent = $_POST['content'];
+        $heart = $_POST['heart'];
 
-        $sql = $db -> prepare("UPDATE review SET title=:title, content=:content WHERE num=:num ");
+        if($_FILES['image']['name']){
+            $imageFullName = strtolower($_FILES['image']['name']);
+            $imageNameSlice = explode(".",$imageFullName);
+            $imageName = $imageNameSlice[0];
+            $imageType = $imageNameSlice[1];
+            $image_ext = array('jpg','jpeg','gif','png');
+            if(array_search($imageType,$image_ext) === false){
+                errMsg('jpg, jpeg, gif, png 확장자만 가능합니다.');
+            }
+            $dates = date("mdhis",time());
+            $newImage = chr(rand(97,122)).chr(rand(97,122)).$dates.rand(1,9).".".$imageType;
+            $dir = "images/";
+            move_uploaded_file($_FILES['image']['tmp_name'],$dir.$newImage);
+            chmod($dir.$newImage,0777);
+         }
+
+        $sql = $db -> prepare("UPDATE review SET title=:title, content=:content, image=:image, heart=:heart WHERE num=:num ");
         $sql -> bindParam("title",$newTitle);
         $sql -> bindParam("content",$newcontent);
+        $sql -> bindParam("image",$newImage);
+        $sql -> bindParam("heart",$heart);
         $sql -> bindParam("num",$num);
         $sql -> execute();
 
@@ -122,15 +141,40 @@ include "db.php";
         $num = $_POST['num'];
         $newTitle = $_POST['title'];
         $newcontent = $_POST['content'];
+        $address = $_POST['address'];
+        $genre = $_POST['genre'];
+        $piece = $_POST['piece'];
+        $subject = $_POST['subject'];
 
-        $sql = $db -> prepare("UPDATE post SET title=:title, content=:content WHERE num=:num ");
+            if($_FILES['image']['name']){
+                $imageFullName = strtolower($_FILES['image']['name']);
+                $imageNameSlice = explode(".",$imageFullName);
+                $imageName = $imageNameSlice[0];
+                $imageType = $imageNameSlice[1];
+                $image_ext = array('jpg','jpeg','gif','png');
+                if(array_search($imageType,$image_ext) === false){
+                    errMsg('jpg, jpeg, gif, png 확장자만 가능합니다.');
+                }
+                $dates = date("mdhis",time());
+                $newImage = chr(rand(97,122)).chr(rand(97,122)).$dates.rand(1,9).".".$imageType;
+                $dir = "images/";
+                move_uploaded_file($_FILES['image']['tmp_name'],$dir.$newImage);
+                chmod($dir.$newImage,0777);
+             }
+
+        $sql = $db -> prepare("UPDATE post SET title=:title, content=:content, image=:image, address=:address, genre=:genre, piece=:piece, subject=:subject WHERE num=:num ");
         $sql -> bindParam("title",$newTitle);
         $sql -> bindParam("content",$newcontent);
+        $sql -> bindParam("image",$newImage);
+        $sql -> bindParam("address",$address);
+        $sql -> bindParam("genre",$genre);
+        $sql -> bindParam("piece",$piece);
+        $sql -> bindParam("subject",$subject);
         $sql -> bindParam("num",$num);
         $sql -> execute();
 
         echo "<script>alert('수정 되었습니다.');
-    location.replace('main.php');</script>";
+    location.replace('post.php');</script>";
     break;
 
     case 'delete':
