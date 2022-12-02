@@ -53,33 +53,34 @@ function screenCheck() {
 }
 
 //슬라이드쇼
-$(document).ready(function () {
-	$(".nav > ul > li").mouseover(function () {
-		$(this).find(".submenu").stop().slideDown(200);
-	});
-	$(".nav > ul > li").mouseout(function () {
-		$(this).find(".submenu").stop().slideUp(200);
-	});
+// $(document).ready(function () {
+// 	$(".nav > ul > li").mouseover(function () {
+// 		$(this).find(".submenu").stop().slideDown(200);
+// 	});
+// 	$(".nav > ul > li").mouseout(function () {
+// 		$(this).find(".submenu").stop().slideUp(200);
+// 	});
 
-	slide
-	var currentIndex = 0;
+// 	slide
+// 	var currentIndex = 0;
 
-	setInterval(function () {
-		if (currentIndex < 2) {
-			currentIndex++;
-		} else {
-			currentIndex = 0;
-		}
+// 	setInterval(function () {
+// 		if (currentIndex < 2) {
+// 			currentIndex++;
+// 		} else {
+// 			currentIndex = 0;
+// 		}
 
-		var slidePosition = currentIndex * (-720) + "px";
-		$(".slide-cont").animate({ top: slidePosition }, 800);
+// 		var slidePosition = currentIndex * (-720) + "px";
+// 		$(".slide-cont").animate({ top: slidePosition }, 800);
 
-	}, 3000);
+// 	}, 3000);
 
 
 
-}
-);
+// }
+
+	
 //login.html
 let sf = document.getElementById("searchForm");
 sf.addEventListener("submit", function (e) {
