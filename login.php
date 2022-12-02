@@ -31,10 +31,10 @@
                             <li><a class="three">PORTFOLIO</a></li>
                             <li><a class="four">ARTIST</a></li>
                             <?php if(!isset($_SESSION['id'])){
-                                echo "<li><a href='login.php'>LOGIN</a></li>";
+                                echo "<li><a class='five' href='login.php'>LOGIN</a></li>";
                                 }
                                 else{
-                                echo"<li><a href='logoutProcess.php'>로그아웃</a></li>";
+                                echo"<li><a class='five' href='logoutProcess.php'>로그아웃</a></li>";
                                 }
                                 ?>
                         </ul>

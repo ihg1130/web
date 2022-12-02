@@ -238,8 +238,9 @@ h1 {
   width: 356px;
 }
 
-.cont1 ul li img:hover {
-  opacity: 0.6;
+
+.cont1 div img:hover {
+  opacity: 0.5;
 }
 
 .cont1 h3 {
@@ -335,6 +336,39 @@ h1 {
   text-align: center;
 }
 
+
+.text1 {
+  position: absolute;
+  top: 50%;
+  left: 16%;
+  transform: translate( -50%, -50% );
+  color: white;
+  background-color: #2B2B2B;
+}
+.text2 {
+  position: absolute;
+  top: 50%;
+  left: 39%;
+  transform: translate( -50%, -50% );
+  color: white;
+  background-color: #2B2B2B;
+}
+.text3 {
+  position: absolute;
+  top: 50%;
+  left: 61%;
+  transform: translate( -50%, -50% );
+  color: white;
+  background-color: #2B2B2B;
+}
+.text4 {
+  position: absolute;
+  top: 50%;
+  left: 84%;
+  transform: translate( -50%, -50% );
+  color: white;
+  background-color: #2B2B2B;
+}
 /* footer */
 
 #footer .ab {
@@ -342,7 +376,7 @@ h1 {
   font-size: 13px;
   font-weight: bold;
   color: white;
-  margin-top: 100px;
+  margin-top: 70px;
 }
 
 
@@ -538,6 +572,7 @@ button {
   /* 글자관련은 보통 최종태그에 줘야 적용 */
   color: white;
   font-size: 15px;
+
   /* 현재 위치에서 상대적 이동 */
   position: relative;
 }
