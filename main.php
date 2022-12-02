@@ -91,7 +91,7 @@ session_start();
 					<p>인기있는 도안을 만나보세요</p>
 					<ul class="cf">
 						<li><a href="writeReview.php"><img src="images/1.jpg" alt="포폴1"></a></li>
-						<li><a href="#"><img src="images/2.jpg" alt="포폴2"></a></li>
+						<li><a href="writepost.php"><img src="images/2.jpg" alt="포폴2"></a></li>
 						<li><a href="#"><img src="images/3.jpg" alt="포폴3"></a></li>
 						<li><a href="#"><img src="images/4.jpg" alt="포폴4"></a></li>
 						<li><a href="#"><img src="images/5.jpg" alt="포폴5"></a></li>
