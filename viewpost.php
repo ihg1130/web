@@ -37,8 +37,8 @@ $num = $_GET['num'];
   document.getElementById("test_div").style.display = "block";
  }
  
- function dive_show() {
-  document.getElementById("test_dive").style.display = "block";
+ function div_hide() {
+  document.getElementById("test_div").style.display = "none";
  }
 </script>
     <title>포트폴리오 보기</title>
@@ -59,11 +59,10 @@ $num = $_GET['num'];
             } else{
                 echo "<br><img src='images/$post[image]'></img>";
             }
-            ?><br>
-        <input type="button" value="보이기" onclick="div_show();"/>
-        <input type="button" value="숨기기" onclick="review.php"/>
+            ?><br><br>
+        <input type="button" value="상세설명" onclick="div_show();"/>
+        <input type="button" value="감추기" onclick="div_hide();"/>
         <div id="test_div"><?= $post['content']?></div>
-        <!-- <div id="test_dive"><?= $post['content']?></div> -->
             <!-- <?= $post['content']?></div> -->
             </div>
             <div class="viewBtn">
