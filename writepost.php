@@ -12,53 +12,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>포트폴리오 쓰기</title>
-    <style>
-.writeTitle{
-    width: 35%;
-    margin: auto;
-    margin-top: 30px;
-    text-align: center;
-    font-size: 30px;
-}
-
-.writeForm{
-    width: 40%;
-    margin: auto;
-    margin-top: 60px;
-    text-align: left;
-}
-
-.writeTypeText{
-    width: 95%;
-    height:50px;
-    resize: none;
-    font-size: 20px;
-}
-
-.writeTextarea{
-    width: 95%;
-    height: 300px;
-    resize: none;
-    font-size: 20px;
-}
-
-.select1{
-    text-align:center;
-}
-
-.writeBtn{
-    width: 95%;
-    margin-top: 20px;
-    text-align: center;
-}
-
-.writeBtn input[type=submit], .writeBtn input[type=button]{
-   font-size: 16px;
-}
-    </style>
+    <link rel="stylesheet" href="css/write.css">
+ <link rel="stylesheet" href="css/nav.css">
 </head>
 <body>
-<section>
+<section class="scroll s-one" data-section-name="s-one">
+        <div class="container">
+            <div id="header" class="cf">
+                <div class="wrap2">
+                    <div class="logo">
+                        <a class="one" href="main.php"><img src="images/logo.png" alt="로고"></a>
+                    </div>
+                    <div class="nav">
+                        <ul class="mainmenu">
+                            <li><a class="two">SERVICES</a></li>
+                            <li><a class="three">PORTFOLIO</a></li>
+                            <li><a class="four">ARTIST</a></li>
+                            <?php if(!isset($_SESSION['id'])){
+                                echo "<li><a class='five' href='login.php'>LOGIN</a></li>";
+                                }
+                                else{
+                                echo"<li><a class='five' href='logoutProcess.php'>LOGOUT</a></li>";
+                                echo"<li><a class='five' href='update.php'>MY PAGE</a></li>";
+                                }
+                                ?></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section id="main">
         <div class="mainCon">
             <div class="writeTitle">포트폴리오 쓰기</div>
             <form class="writeForm" action="board_process.php?mode=write1" method="post" enctype="multipart/form-data">
@@ -68,6 +51,7 @@
                 <p><input class="writeTypeText" type="text" name="title" placeholder="제목을 입력해주세요" required></p>
                 <textarea class="writeTextarea" type="text" name="content" placeholder="설명을 입력해주세요"  required></textarea>
                 <div class="select">지역 : 
+                    
                 <select class="select1" name="address" id="address">
                     <option value="서울">서울</option>
                     <option value="경기남부">경기남부</option>
@@ -88,11 +72,11 @@
                 </select>&nbsp;
                 장르 :
                 <select class="select1" name="genre" id="genre">
+                <option value="레터링">레터링</option>
                     <option value="이레즈미">이레즈미</option>
                     <option value="블랙워크">블랙워크</option>
                     <option value="올드스쿨">올드스쿨</option>
                     <option value="뉴스쿨">뉴스쿨</option>
-                    <option value="레터링">레터링</option>
                     <option value="미니타투">미니타투</option>
                     <option value="일러스트">일러스트</option>
                     <option value="수채화">수채화</option>
@@ -139,8 +123,8 @@
                 </div><br>
                 <input type="file" name="image">
                 <div class="writeBtn">   
-                <input type="submit" value="작성">&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="button" value="취소" onclick="history.back(1)">
+                <input type="submit" class="sboxbtn" value="작성">&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="button" class="sboxbtn" value="취소" onclick="history.back(1)">
                 </div>
             </form>
         </div>

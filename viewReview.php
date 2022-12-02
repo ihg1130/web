@@ -33,10 +33,36 @@ $num = $_GET['num'];
         }
     </script>
     <title>리뷰 보기</title>
+    <link rel="stylesheet" href="css/nav.css">
 </head>
 <body>
-<section>
-        <div class="mainCon">
+<section class="scroll s-one" data-section-name="s-one">
+        <div class="container">
+            <div id="header" class="cf">
+                <div class="wrap2">
+                    <div class="logo">
+                        <a class="one" href="main.php"><img src="images/logo.png" alt="로고"></a>
+                    </div>
+                    <div class="nav">
+                        <ul class="mainmenu">
+                            <li><a class="two">SERVICES</a></li>
+                            <li><a class="three">PORTFOLIO</a></li>
+                            <li><a class="four">ARTIST</a></li>
+                            <?php if(!isset($_SESSION['id'])){
+                                echo "<li><a class='five' href='login.php'>LOGIN</a></li>";
+                                }
+                                else{
+                                echo"<li><a class='five' href='logoutProcess.php'>LOGOUT</a></li>";
+                                echo"<li><a class='five' href='update.php'>MY PAGE</a></li>";
+                                }
+                                ?></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section id="main">
+        <div class="mainCon" id="v">
             <div class="viewTitle"> 제목 : <?= $review['title'] ?></div>
             <div class="viewInfo">
                 <div class="viewName">글쓴이 : <?= $review['name']?></div>
@@ -58,8 +84,8 @@ $num = $_GET['num'];
                     } else{
                 ?>
                 <div class="viewBtn1">
-                <a href="reviewUpdate.php?num=<?= $review['num']?>">수정</a>&nbsp;&nbsp;
-                <a href="#" onclick="confirmDel('정말로 삭제하시겠습니까?')">삭제</a>
+                <a class="guull" href="reviewUpdate.php?num=<?= $review['num']?>">수정</a>&nbsp;&nbsp;
+                <a class="guull" href="#" onclick="confirmDel('정말로 삭제하시겠습니까?')">삭제</a>
                 </div>
                 <?php } ?>
             </div>

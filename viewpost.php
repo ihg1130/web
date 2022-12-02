@@ -42,9 +42,35 @@ $num = $_GET['num'];
  }
 </script>
     <title>포트폴리오 보기</title>
+    <link rel="stylesheet" href="css/nav.css">
 </head>
 <body>
-<section>
+<section class="scroll s-one" data-section-name="s-one">
+        <div class="container">
+            <div id="header" class="cf">
+                <div class="wrap2">
+                    <div class="logo">
+                        <a class="one" href="main.php"><img src="images/logo.png" alt="로고"></a>
+                    </div>
+                    <div class="nav">
+                        <ul class="mainmenu">
+                            <li><a class="two">SERVICES</a></li>
+                            <li><a class="three">PORTFOLIO</a></li>
+                            <li><a class="four">ARTIST</a></li>
+                            <?php if(!isset($_SESSION['id'])){
+                                echo "<li><a class='five' href='login.php'>LOGIN</a></li>";
+                                }
+                                else{
+                                echo"<li><a class='five' href='logoutProcess.php'>LOGOUT</a></li>";
+                                echo"<li><a class='five' href='update.php'>MY PAGE</a></li>";
+                                }
+                                ?></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section id="main">
         <div class="mainCon">
             <div class="viewTitle"> 제목 : <?= $post['title'] ?></div>
             <div class="viewInfo">

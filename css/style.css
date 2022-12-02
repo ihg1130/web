@@ -340,35 +340,40 @@ h1 {
 .text1 {
   position: absolute;
   top: 50%;
-  left: 16%;
-  transform: translate( -50%, -50% );
+  left: 19%;
+  transform: translate(-50%, -50%);
   color: white;
   background-color: #2B2B2B;
+
 }
+
 .text2 {
   position: absolute;
   top: 50%;
-  left: 39%;
-  transform: translate( -50%, -50% );
+  left: 40%;
+  transform: translate(-50%, -50%);
   color: white;
   background-color: #2B2B2B;
 }
+
 .text3 {
   position: absolute;
   top: 50%;
-  left: 61%;
-  transform: translate( -50%, -50% );
+  left: 60%;
+  transform: translate(-50%, -50%);
   color: white;
   background-color: #2B2B2B;
 }
+
 .text4 {
   position: absolute;
   top: 50%;
-  left: 84%;
-  transform: translate( -50%, -50% );
+  left: 81%;
+  transform: translate(-50%, -50%);
   color: white;
   background-color: #2B2B2B;
 }
+
 /* footer */
 
 #footer .ab {
@@ -533,7 +538,8 @@ button {
   /* 동위선택자와의 간격 조정 */
 }
 
-.loginbox input#id,#pw {
+.loginbox input#id,
+#pw {
   display: block;
   width: 100%;
   height: 50px;
@@ -590,8 +596,8 @@ button {
   font-weight: bold;
 }
 
-input #type{
-size: 15px;
+input #type {
+  size: 15px;
 }
 
 /* sign_up */
@@ -605,12 +611,13 @@ size: 15px;
   z-index: 999;
 }
 
-input.form-control{
-  
+input.form-control {
+
   width: 35%;
   height: 30px;
 }
-input.kkk{
+
+input.kkk {
   background-color: #eee;
   color: #000;
   border-radius: 5%;
@@ -618,7 +625,7 @@ input.kkk{
   border-radius: 5px;
 }
 
-input.kkkk{
+input.kkkk {
   background-color: #eee;
   color: #000;
   width: 150px;
@@ -633,5 +640,5 @@ div .mb-3 {
   margin-top: 30px;
   font-size: 15px;
   color: #eee;
-  
+
 }

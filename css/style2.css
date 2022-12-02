@@ -1,61 +1,72 @@
-.viewTitle{
+* {
+    color: black;
+}
+
+.viewTitle {
     margin-top: 50px;
     margin-bottom: 20px;
     margin-left: 350px;
-    width: fit-content;
+    width: 40%;
     font-size: 26px;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
+    background-color: #eee;
+
+
 }
 
-.viewInfo{
+.viewInfo {
     margin-top: 10px;
     margin-left: 350px;
     width: 40%;
     box-sizing: border-box;
     font-size: 18px;
-    border-top: 2px solid #34495e;
-    border-bottom: 2px solid #34495e;
-    background-color: #9cb6e0;
+
+    background-color: #eee;
     padding-top: 2px;
     padding-bottom: 2px;
 }
 
-.viewName{
+.viewName {
     float: left;
 }
-.viewTime{
+
+.viewTime {
     text-align: right;
 }
 
-.viewStory{
-    margin-top:20px;
-    margin-left: 350px;
-    width: 30%;
-    height: 700px; 
-}
-
- .viewStory img{
+div.viewStory {
     margin-top: 20px;
-    width: 80%; 
+    margin-left: 350px;
+    width: 40%;
+    height: 700px;
+    background-color: #eee;
 }
 
-.viewBtn{
-        display: flex;
-        width: 50%;
-        margin-top: 20px;
-        margin-left: 350px;
-        flex-direction: row;
-        justify-content: space-between;
-        font-weight:bold;
-}
-.viewBtn1{
- margin-right:200px;
-}
-.viewBtn a:link{
-    color: black;
+.viewStory img {
+    margin-top: 20px;
+    width: 80%;
 }
 
-.viewBtn a:hover{
-    color: #3498db;
+.viewBtn {
+    display: flex;
+    width: 50%;
+    margin-top: 20px;
+    margin-left: 350px;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.viewBtn1 {
+    margin-right: 180px;
+
+}
+
+.viewBtn a:link {
+    color: #eee;
+}
+
+.viewBtn a:hover {
+    color: white;
 }

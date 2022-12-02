@@ -1,0 +1,67 @@
+.writeTitle {
+    width: 35%;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.writeForm {
+    width: 40%;
+    margin: auto;
+    margin-top: 60px;
+    text-align: left;
+}
+
+input.writeTypeText {
+    width: 723px;
+    height: 50px;
+    resize: none;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+textarea.writeTextarea {
+    width: 725px;
+    height: 300px;
+    resize: none;
+    font-size: 20px;
+}
+
+.select1 {
+    text-align: center;
+}
+
+div.radio {
+    margin-left: 580px;
+}
+
+.writeBtn {
+    width: 95%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.writeBtn input[type=submit],
+.writeBtn input[type=button] {
+    font-size: 16px;
+}
+
+select.select1 {
+    margin-left: 33px;
+
+}
+
+select#address.select1,
+select#genre.select1,
+select#piece.select1,
+select#subject.select1 {
+    width: 80px;
+    height: 27px;
+    font-size: 18px;
+}
+
+option {
+    width: 50px;
+    height: 27px;
+}

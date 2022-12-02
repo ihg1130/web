@@ -42,8 +42,8 @@
                 <p class="findEmail">이메일 : <input type="text"  name="email" placeholder="이메일 입력" size="30" required></p>
                 <div class="findBtn">
                     <br>
-                <input type="submit" value="찾기" >&nbsp;&nbsp;&nbsp;
-                <input type="button" value="취소"  onclick="history.back(1)">
+                <input type="submit" value="찾기" class="sboxbtn">&nbsp;&nbsp;&nbsp;
+                <input type="button" value="취소" class="sboxbtn" onclick="history.back(1)">
                 </div>
             </form>
             </div>

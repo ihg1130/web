@@ -13,9 +13,35 @@ $sql -> execute();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style1.css">
     <title>포트폴리오</title>
+ <link rel="stylesheet" href="css/nav.css">
 </head>
 <body>
-<section>
+<section class="scroll s-one" data-section-name="s-one">
+        <div class="container">
+            <div id="header" class="cf">
+                <div class="wrap2">
+                    <div class="logo">
+                        <a class="one" href="main.php"><img src="images/logo.png" alt="로고"></a>
+                    </div>
+                    <div class="nav">
+                        <ul class="mainmenu">
+                            <li><a class="two">SERVICES</a></li>
+                            <li><a class="three">PORTFOLIO</a></li>
+                            <li><a class="four">ARTIST</a></li>
+                            <?php if(!isset($_SESSION['id'])){
+                                echo "<li><a class='five' href='login.php'>LOGIN</a></li>";
+                                }
+                                else{
+                                echo"<li><a class='five' href='logoutProcess.php'>LOGOUT</a></li>";
+                                echo"<li><a class='five' href='update.php'>MY PAGE</a></li>";
+                                }
+                                ?></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section id="main">
         <div class="mainCon">
             <div class="reviewTitle">포트폴리오 보기</div>
             <table class="reviewTable">
@@ -52,7 +78,7 @@ $sql -> execute();
                         </tr>
                     </tfoot>
             </table>
-            <div class="writeReview"><a href="writepost.php">글쓰기</a></div>
+            <div class="writeReview"><a href="writepost.php" id="guull" >글쓰기</a></div>
         </div>
     </section>
     <footer></footer>

@@ -14,9 +14,35 @@ $count=0;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style1.css">
     <title>리뷰 보기</title>
+    <link rel="stylesheet" href="css/nav.css">
 </head>
 <body>
-<section>
+<section class="scroll s-one" data-section-name="s-one">
+        <div class="container">
+            <div id="header" class="cf">
+                <div class="wrap2">
+                    <div class="logo">
+                        <a class="one" href="main.php"><img src="images/logo.png" alt="로고"></a>
+                    </div>
+                    <div class="nav">
+                        <ul class="mainmenu">
+                            <li><a class="two">SERVICES</a></li>
+                            <li><a class="three">PORTFOLIO</a></li>
+                            <li><a class="four">ARTIST</a></li>
+                            <?php if(!isset($_SESSION['id'])){
+                                echo "<li><a class='five' href='login.php'>LOGIN</a></li>";
+                                }
+                                else{
+                                echo"<li><a class='five' href='logoutProcess.php'>LOGOUT</a></li>";
+                                echo"<li><a class='five' href='update.php'>MY PAGE</a></li>";
+                                }
+                                ?></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section id="main">
         <div class="mainCon">
             <div class="reviewTitle">리뷰 보기</div>
             <table class="reviewTable">
@@ -53,7 +79,7 @@ $count=0;
                         </tr>
                     </tfoot>
             </table>
-            <div class="writeReview"><a href="writeReview.php">글쓰기</a></div>
+            <div class="writeReview"><a href="writeReview.php" id="guull" >글작성</a></div>
         </div>
     </section>
     <footer></footer>
