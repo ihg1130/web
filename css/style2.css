@@ -31,14 +31,13 @@
 .viewStory{
     margin-top:20px;
     margin-left: 350px;
-    width: 40%;
-    height: 700px;
-    overflow: scroll;
+    width: 30%;
+    height: 700px; 
 }
 
-.viewStory img{
+ .viewStory img{
     margin-top: 20px;
-    width: 60%;
+    width: 80%; 
 }
 
 .viewBtn{

@@ -44,13 +44,14 @@ if($dbcon->query($sql)){
    }else{                                                                           
     echo '가입 취소 되었습니다.';                                                            
    }
-  
+
   mysqli_close($mysqli);
 }
 else{
     echo "<script>alert('작성되지 않는 항목이 있습니다.')</script>";
     echo "<script>history.back(1);</script>";       
 }
+
 break;
 
     case 'update':
@@ -68,6 +69,9 @@ break;
         $sql -> bindParam("pw",$pw1);
         $sql -> bindParam("phone",$tel);
         $sql -> bindParam("id",$id);
+     
+        // $sql1 =$db -> prepare("SELECT * from member as m join post as p on m.userid=:p.userid");
+        // $sql1 -> execute();
 
         if(!$pw1 || !$pw2){
             errMsg("비밀번호를 입력해주세요.");

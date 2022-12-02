@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>리뷰쓰기</title>
     <style>
-        .writeTitle{
+.writeTitle{
     width: 35%;
     margin: auto;
     margin-top: 30px;
@@ -28,15 +28,26 @@
     text-align: left;
 }
 
-.writeForm input[type=text]{
-    font-size: 40px;
-    margin-bottom: 30px;
+.writeTypeText{
+    width: 95%;
+    height:50px;
+    resize: none;
+    font-size: 20px;
 }
 
 .writeTextarea{
     width: 95%;
-    height: 500px;
+    height: 300px;
     resize: none;
+    font-size: 20px;
+}
+
+.select1{
+    text-align:center;
+}
+
+.radio{
+    margin-left :600px;
 }
 
 .writeBtn{
@@ -58,9 +69,13 @@
             <input type="hidden" name="userid" value="review">    
             <input type="hidden" name="id" value="<?= $_SESSION['id'] ?>">
             <input type="hidden" name="name" value="<?= $_SESSION['name'] ?>">
-                <p><input class="writeTypeText" type="text" name="title" size="31" placeholder="제목을 입력해주세요" required></p>
+                <p><input class="writeTypeText" type="text" name="title" placeholder="제목을 입력해주세요" required></p>
                 <textarea class="writeTextarea" name="content" placeholder="본문을 입력해주세요"  required></textarea>
                 <input type="file" name="image">
+                <div class="radio">
+                <input type="radio" name="heart" id="heart" value="1" checked />추천 &nbsp;
+                <input type="radio" name="heart" id="heart" value="0" />비추천
+                </div><br>
                 <div class="writeBtn">   
                 <input type="submit" value="작성">&nbsp;&nbsp;&nbsp;&nbsp;
                 <input type="button" value="취소" onclick="history.back(1)">

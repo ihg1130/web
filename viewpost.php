@@ -6,12 +6,12 @@ session_start();
 // ini_set( "display_errors", 1 );
 
 $num = $_GET['num'];
-    $sql = $db -> prepare("SELECT * FROM review WHERE num=:num");
+    $sql = $db -> prepare("SELECT * FROM post WHERE num=:num");
     $sql -> bindParam("num",$num);
     $sql -> execute();
-    $review = $sql -> fetch();
+    $post = $sql -> fetch();
 
-    $time = DateTime::createFromFormat('Y-m-d H:i:s', $review['r_date']);
+    $time = DateTime::createFromFormat('Y-m-d H:i:s', $post['p_date']);
     $time = date_format($time, 'Y-m-d');
 ?>
 
@@ -26,39 +26,53 @@ $num = $_GET['num'];
         function confirmDel(text) {
             const selValue = confirm(text);
             if(selValue == true){
-                location.href="board_process.php?mode=delete&num=<?= $review['num']?>";
+                location.href="board_process.php?mode=delete1&num=<?= $post['num']?>";
             } else if(selValue == false){
                 history.back(1);
             }
         }
     </script>
-    <title>리뷰 보기</title>
+    <script type="text/javascript">
+ function div_show() {
+  document.getElementById("test_div").style.display = "block";
+ }
+ 
+ function dive_show() {
+  document.getElementById("test_dive").style.display = "block";
+ }
+</script>
+    <title>포트폴리오 보기</title>
 </head>
 <body>
 <section>
         <div class="mainCon">
-            <div class="viewTitle"> 제목 : <?= $review['title'] ?></div>
+            <div class="viewTitle"> 제목 : <?= $post['title'] ?></div>
             <div class="viewInfo">
-                <div class="viewName">글쓴이 : <?= $review['name']?></div>
+                <div class="viewName">글쓴이 : <?= $post['name']?></div>
                 <div class="viewTime">작성날짜 : <?= $time?></div>
             </div>
             <div class="viewStory">
-            <?= $review['content']?>
+            <!-- <?= $post['content']?> -->
             <?php
-             if(!$review['image']){
+             if(!$post['image']){
               
             } else{
-                echo "<br><img src='images/$review[image]'></img>";
+                echo "<br><img src='images/$post[image]'></img>";
             }
-            ?>
+            ?><br>
+        <input type="button" value="보이기" onclick="div_show();"/>
+        <input type="button" value="숨기기" onclick="review.php"/>
+        <div id="test_div"><?= $post['content']?></div>
+        <!-- <div id="test_dive"><?= $post['content']?></div> -->
+            <!-- <?= $post['content']?></div> -->
             </div>
             <div class="viewBtn">
-                <a href="review.php">목록으로</a>&nbsp;&nbsp;
-                <?php if($review['id'] != $_SESSION['id']){
+                <a href="post.php">목록으로</a>&nbsp;&nbsp;
+                <?php if($post['id'] != $_SESSION['id']){
                     } else{
                 ?>
                 <div class="viewBtn1">
-                <a href="reviewUpdate.php?num=<?= $review['num']?>">수정</a>&nbsp;&nbsp;
+                <a href="postUpdate.php?num=<?= $post['num']?>">수정</a>&nbsp;&nbsp;
                 <a href="#" onclick="confirmDel('정말로 삭제하시겠습니까?')">삭제</a>
                 </div>
                 <?php } ?>
