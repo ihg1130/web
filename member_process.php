@@ -17,7 +17,7 @@ include "db.php";
 switch ($_GET['mode']){
 
     case 'register' :
-        $host = "localhost";
+    $host = "localhost";
     $user = "root";
     $password = "123456";
     $dbname = "lim";
@@ -51,8 +51,6 @@ else{
     echo "<script>alert('작성되지 않는 항목이 있습니다.')</script>";
     echo "<script>history.back(1);</script>";       
 }
-
-break;
 
     case 'update':
         $id = $_POST['id'];

@@ -196,7 +196,7 @@ include "db.php";
         $sql -> execute();
 
         echo "<script>alert('삭제 되었습니다.');
-        location.replace('main.php');</script>";
+        location.replace('post.php');</script>";
     break;
     }
 ?>

@@ -2,8 +2,14 @@
 include "db.php";
 session_start();
 
-$sql = $db -> prepare("SELECT * FROM review order by num DESC");
-$sql -> execute();
+    $host = "localhost";
+    $user = "root";
+    $password = "123456";
+    $dbname = "lim";
+    $dbcon = new mysqli($host, $user, $password, $dbname);
+
+    $sql = "SELECT * FROM review where num='1' or num='2' or num='3' order by num DESC";
+    $result = mysqli_query($dbcon,$sql);
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -47,14 +53,14 @@ $sql -> execute();
             <table class="reviewTable">
                 <thead>
                     <tr>
-                        <td class="reviewTd1">번호</td>
+                        <td class="reviewTd1">타투이스트</td>
                         <td class="reviewTd2">제목</td>
                         <td class="reviewTd3">글쓴이</td>
                         <td class="reviewTd4">작성시간</td>
                     </tr>
                 </thead>
                 <?php
-                    while ($review = $sql -> fetch()){
+                    while ($review = mysqli_fetch_array($result)){
                 ?> 
                 <?php
                 $time = DateTime::createFromFormat('Y-m-d H:i:s', $review['r_date']);
@@ -62,7 +68,7 @@ $sql -> execute();
                 ?>
                     <tbody>
                         <tr>
-                            <td class="reviewTd1"><?= $review['num']?></td>
+                            <td class="reviewTd1">혜은</td>
                             <td class="reviewTd2"><a href="viewReview.php?num=<?= $review['num']?>"><?= $review['title']?></a></td>
                             <td class="reviewTd3"><?= $review['name']?></td>
                             <td class="reviewTd4"><?= $time?></td>

@@ -66,12 +66,13 @@
                     <option value="충남">충남</option>
                     <option value="전북">전북</option>
                     <option value="전남">전남</option>
-                    <option value="광주">강원</option>
+                    <option value="광주">광주</option>
                     <option value="강원">강원</option>
                     <option value="제주도">제주도</option>
                 </select>&nbsp;
                 장르 :
                 <select class="select1" name="genre" id="genre">
+                <option value="없음">없음</option>
                 <option value="레터링">레터링</option>
                     <option value="이레즈미">이레즈미</option>
                     <option value="블랙워크">블랙워크</option>
@@ -94,6 +95,7 @@
                     <option value="골반">골반</option>
                     <option value="배">배</option>
                     <option value="손목">손목</option>
+                    <option value="다리">다리</option>
                     <option value="허벅지">허벅지</option>
                     <option value="목">목</option>
                     <option value="종아리">종아리</option>
@@ -105,7 +107,8 @@
                 </select>&nbsp;  
                 주제 :
                 <select class="select1" name="subject" id="subject">
-                    <option value="꽃">꽃</option>
+                <option value="없음">없음</option>    
+                <option value="꽃">꽃</option>
                     <option value="고래">고래</option>
                     <option value="장미">장미</option>
                     <option value="나침반">나침반</option>

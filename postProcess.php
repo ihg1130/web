@@ -1,9 +1,20 @@
 <?php
 include "db.php";
+// include "serviceProcess.php";
 session_start();
 
-$sql = $db -> prepare("SELECT * FROM review order by num DESC");
+$address = $_POST['address'];
+        $genre = $_POST['genre'];
+        $subject = $_POST['subject'];
+        $piece = $_POST['piece'];
+
+$sql = $db -> prepare("SELECT * FROM post where address=:address or genre=:genre or subject=:subject or piece=:piece order by num DESC");
+$sql -> bindParam("address",$address);
+        $sql -> bindParam("genre",$genre);
+        $sql -> bindParam("subject",$subject);
+        $sql -> bindParam("piece",$piece);
 $sql -> execute();
+
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -12,8 +23,8 @@ $sql -> execute();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style1.css">
-    <title>리뷰 보기</title>
-    <link rel="stylesheet" href="css/nav.css">
+    <title>포트폴리오</title>
+ <link rel="stylesheet" href="css/nav.css">
 </head>
 <body>
 <section class="scroll s-one" data-section-name="s-one">
@@ -43,7 +54,7 @@ $sql -> execute();
     </section>
 <section id="main">
         <div class="mainCon">
-            <div class="reviewTitle">리뷰 보기</div>
+            <div class="reviewTitle">포트폴리오 보기</div>
             <table class="reviewTable">
                 <thead>
                     <tr>
@@ -54,17 +65,17 @@ $sql -> execute();
                     </tr>
                 </thead>
                 <?php
-                    while ($review = $sql -> fetch()){
+                    while ($post = $sql -> fetch()){
                 ?> 
                 <?php
-                $time = DateTime::createFromFormat('Y-m-d H:i:s', $review['r_date']);
+                $time = DateTime::createFromFormat('Y-m-d H:i:s', $post['p_date']);
                 $time = date_format($time, 'Y-m-d');
                 ?>
                     <tbody>
                         <tr>
-                            <td class="reviewTd1"><?= $review['num']?></td>
-                            <td class="reviewTd2"><a href="viewReview.php?num=<?= $review['num']?>"><?= $review['title']?></a></td>
-                            <td class="reviewTd3"><?= $review['name']?></td>
+                            <td class="reviewTd1"><?= $post['num']?></td>
+                            <td class="reviewTd2"><a href="viewpost.php?num=<?= $post['num']?>"><?= $post['title']?></a></td>
+                            <td class="reviewTd3"><?= $post['name']?></td>
                             <td class="reviewTd4"><?= $time?></td>
                         </tr>
                     </tbody>
@@ -78,7 +89,7 @@ $sql -> execute();
                         </tr>
                     </tfoot>
             </table>
-            <div class="writeReview"><a href="writeReview.php" id="guull" >글작성</a></div>
+            <div class="writeReview"><a href="writepost.php" id="guull" >글쓰기</a></div>
         </div>
     </section>
     <footer></footer>

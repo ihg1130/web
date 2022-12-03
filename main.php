@@ -68,18 +68,16 @@ session_start();
 					<p>&nbsp;</p>
 					<p>타투라이프의 다양 서비스를 만나보세요</p>
 					<div class="cf" id="tb">
-						<a href="#"><img src="images/상세검색.jpg" alt="상세검색"></a>
+						<a href="service1.php"><img src="images/상세검색.jpg" alt="상세검색"></a>
 						<h4 class="text1">상세검색</h4>
-						<a href="#"><img src="images/yky.jpg" alt="테마검색"></a>
-						<h4 class="text2">테마검색</h4>
-						<a href="#"><img src="images/피부과.jpg" alt="병원리뷰"></a>
+						<a href="review.php"><img src="images/yky.jpg" alt="테마검색"></a>
+						<h4 class="text2">타투 리뷰보기</h4>
+						<a href="https://www.modoodoc.com/hospitals/?search_query=%EB%AC%B8%EC%8B%A0%EC%A0%9C%EA%B1%B0"><img src="images/피부과.jpg" alt="병원리뷰"></a>
 						<h4 class="text3">병원리뷰</h4>
-						<a href="#"><img src="images/1k.jpg" alt="광고문의"></a>
+						<a href="https://open.kakao.com/o/sYAQpgRe"><img src="images/1k.jpg" alt="광고문의"></a>
 						<h4 class="text4">광고문의</h4>
 					</div>
 				</div>
-			</div>
-		</div>
 	</section>
 
 	<section class="scroll s-three" data-section-name="s-three">
@@ -90,12 +88,12 @@ session_start();
 					<p>&nbsp;</p>
 					<p>인기있는 도안을 만나보세요</p>
 					<ul class="cf">
-						<li><a href="writeReview.php"><img src="images/1.jpg" alt="포폴1"></a></li>
-						<li><a href="writepost.php"><img src="images/2.jpg" alt="포폴2"></a></li>
-						<li><a href="#"><img src="images/3.jpg" alt="포폴3"></a></li>
-						<li><a href="#"><img src="images/4.jpg" alt="포폴4"></a></li>
-						<li><a href="#"><img src="images/5.jpg" alt="포폴5"></a></li>
-						<li><a href="#"><img src="images/6.jpg" alt="포폴6"></a></li>
+						<li><a href="viewpost.php?num=1"><img src="images/1.jpg" alt="포폴1"></a></li>
+						<li><a href="viewpost.php?num=2"><img src="images/2.jpg" alt="포폴2"></a></li>
+						<li><a href="viewpost.php?num=3"><img src="images/3.jpg" alt="포폴3"></a></li>
+						<li><a href="viewpost.php?num=4"><img src="images/4.jpg" alt="포폴4"></a></li>
+						<li><a href="viewpost.php?num=5"><img src="images/5.jpg" alt="포폴5"></a></li>
+						<li><a href="viewpost.php?num=6"><img src="images/6.jpg" alt="포폴6"></a></li>
 					</ul>
 				</div>
 			</div>

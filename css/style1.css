@@ -45,6 +45,10 @@
     font-size: 22px;
 }
 
+.reviewTd2{
+    color:#eee;
+}
+
 .reviewTable tbody .reviewTd3{
     width: 10%;
     font-size: 22px;

@@ -9,6 +9,52 @@
 	<link rel="stylesheet" href="css/style.css">
 	<title>타투컨벤션 - 맞춤검색</title>
 	<link rel="stylesheet" href="css/nav.css">
+	<script>
+		function checkOnlyOne(element) {
+  
+  const checkboxes 
+      = document.getElementsByName("address");
+  
+  checkboxes.forEach((cb) => {
+    cb.checked = false;
+  })
+  
+  element.checked = true;
+}
+function checkOnlyOne1(element) {
+  
+  const checkboxes 
+      = document.getElementsByName("genre");
+  
+  checkboxes.forEach((cb) => {
+    cb.checked = false;
+  })
+  
+  element.checked = true;
+}
+function checkOnlyOne2(element) {
+  
+  const checkboxes 
+      = document.getElementsByName("subject");
+  
+  checkboxes.forEach((cb) => {
+    cb.checked = false;
+  })
+  
+  element.checked = true;
+}
+function checkOnlyOne3(element) {
+  
+  const checkboxes 
+      = document.getElementsByName("piece");
+  
+  checkboxes.forEach((cb) => {
+    cb.checked = false;
+  })
+  
+  element.checked = true;
+}
+	</script>
 </head>
 <body>
 <section class="scroll s-one" data-section-name="s-one">
@@ -44,114 +90,83 @@
 							class="xi-angle-left"></i></span></a>
 				<span class="bh_title">맞춤검색</span>
 			</div>
-			<form action="/" method="get"><input type="hidden" name="error_return_url" value="/filter" />
-				<input type="hidden" name="mid" value="search" />
-				<input type="hidden" name="act" value="" />
+			<form  name="post" action="postProcess.php" method="POST">
+            <input type="hidden" name="userid" value="post">
 				    <div class="bh bh_view">
 							<p class="bh fs-18 fw-b mb-5">지역</p>
 							<ul>
 								<li>
-									<input class="category_1-all" type="checkbox" name="category_1" id="category_1-all"
-										value="전체" checked>
-									<label for="category_1-all">모든지역</label>
-								</li>
-								<li>
-									<input class="category_1" type="checkbox" name="category_1[]" id="category_1-0"
-										value="서울">
-									<label for="category_1-0">서울</label>
-								</li>
-								<li>
-									<input class="category_1" type="checkbox" name="category_1[]" id="category_1-1"
-										value="홍대/신촌">
-									<label for="category_1-1">홍대/신촌</label>
-								</li>
-								<li>
-									<input class="category_1" type="checkbox" name="category_1[]" id="category_1-2"
-										value="이태원">
-									<label for="category_1-2">이태원</label>
-								</li>
-								<li>
-									<input class="category_1" type="checkbox" name="category_1[]" id="category_1-3"
-										value="강남">
-									<label for="category_1-3">강남</label>
-								</li>
-								<li>
-									<input class="category_1" type="checkbox" name="category_1[]" id="category_1-4"
+									<input class="category_1" type="checkbox" name="address" id="addreess" onclick='checkOnlyOne(this)'
 										value="경기남부">
 									<label for="category_1-4">경기남부</label>
 								</li>
 								<li>
-									<input class="category_1" type="checkbox" name="category_1[]" id="category_1-5"
+									<input class="category_1" type="checkbox" name="address" id="addreess" onclick='checkOnlyOne(this)'
 										value="경기북부">
 									<label for="category_1-5">경기북부</label>
 								</li>
 								<li>
-									<input class="category_1" type="checkbox" name="category_1[]" id="category_1-6"
+									<input class="category_1" type="checkbox" name="address" id="addreess" onclick='checkOnlyOne(this)'
 										value="인천">
 									<label for="category_1-6">인천</label>
 								</li>
 								<li>
-									<input class="category_1" type="checkbox" name="category_1[]" id="category_1-7"
+									<input class="category_1" type="checkbox" name="address" id="addreess" onclick='checkOnlyOne(this)'
 										value="부산">
 									<label for="category_1-7">부산</label>
 								</li>
 								<li>
-									<input class="category_1" type="checkbox" name="category_1[]" id="category_1-8"
+									<input class="category_1" type="checkbox" name="address" id="addreess" onclick='checkOnlyOne(this)'
 										value="대구">
 									<label for="category_1-8">대구</label>
 								</li>
 								<li>
-									<input class="category_1" type="checkbox" name="category_1[]" id="category_1-9"
+									<input class="category_1" type="checkbox" name="address" id="addreess" onclick='checkOnlyOne(this)'
 										value="대전">
 									<label for="category_1-9">대전</label>
 								</li>
 								<li>
-									<input class="category_1" type="checkbox" name="category_1[]" id="category_1-10"
+									<input class="category_1" type="checkbox" name="address" id="addreess" onclick='checkOnlyOne(this)'
 										value="전북">
 									<label for="category_1-10">전북</label>
 								</li>
 								<li>
-									<input class="category_1" type="checkbox" name="category_1[]" id="category_1-11"
+									<input class="category_1" type="checkbox" name="address" id="addreess" onclick='checkOnlyOne(this)'
 										value="전남">
 									<label for="category_1-11">전남</label>
 								</li>
 								<li>
-									<input class="category_1" type="checkbox" name="category_1[]" id="category_1-12"
+									<input class="category_1" type="checkbox" name="address" id="addreess" onclick='checkOnlyOne(this)'
 										value="충북">
 									<label for="category_1-12">충북</label>
 								</li>
 								<li>
-									<input class="category_1" type="checkbox" name="category_1[]" id="category_1-13"
+									<input class="category_1" type="checkbox" name="address" id="addreess" onclick='checkOnlyOne(this)'
 										value="충남">
 									<label for="category_1-13">충남</label>
 								</li>
 								<li>
-									<input class="category_1" type="checkbox" name="category_1[]" id="category_1-14"
+									<input class="category_1" type="checkbox" name="address" id="addreess" onclick='checkOnlyOne(this)'
 										value="경북">
 									<label for="category_1-14">경북</label>
 								</li>
 								<li>
-									<input class="category_1" type="checkbox" name="category_1[]" id="category_1-15"
+									<input class="category_1" type="checkbox" name="address" id="addreess" onclick='checkOnlyOne(this)'
 										value="경남">
 									<label for="category_1-15">경남</label>
 								</li>
 								<li>
-									<input class="category_1" type="checkbox" name="category_1[]" id="category_1-16"
-										value="울산">
-									<label for="category_1-16">울산</label>
-								</li>
-								<li>
-									<input class="category_1" type="checkbox" name="category_1[]" id="category_1-17"
+									<input class="category_1" type="checkbox" name="address" id="addreess" onclick='checkOnlyOne(this)'
 										value="광주">
 									<label for="category_1-17">광주</label>
 								</li>
 								<li>
-									<input class="category_1" type="checkbox" name="category_1[]" id="category_1-18"
+									<input class="category_1" type="checkbox" name="address" id="addreess" onclick='checkOnlyOne(this)'
 										value="강원">
 									<label for="category_1-18">강원</label>
 								</li>
 								<li>
-									<input class="category_1" type="checkbox" name="category_1[]" id="category_1-20"
+									<input class="category_1" type="checkbox" name="address" id="addreess" onclick='checkOnlyOne(this)'
 										value="제주도">
 									<label for="category_1-20">제주도</label>
 								</li>
@@ -162,58 +177,58 @@
 						
 							<p class="bh fs-18 fw-b mb-5">장르</p>
 							<ul>
-								<li>
-									<input class="category_2-all" type="checkbox" name="category_2" id="category_2-all"
-										value="전체" checked>
-									<label for="category_2-all">모든장르</label>
+							<li>
+									<input class="category_2" type="checkbox" name="genre" id="genre" onclick='checkOnlyOne1(this)'
+										value="없음">
+									<label for="category_2-0">없음</label>
 								</li>
 								<li>
-									<input class="category_2" type="checkbox" name="category_2[]" id="category_2-0"
+									<input class="category_2" type="checkbox" name="genre" id="genre" onclick='checkOnlyOne1(this)'
 										value="이레즈미">
 									<label for="category_2-0">이레즈미</label>
 								</li>
 								<li>
-									<input class="category_2" type="checkbox" name="category_2[]" id="category_2-1"
+									<input class="category_2" type="checkbox" name="genre" id="genre" onclick='checkOnlyOne1(this)'
 										value="블랙워크">
 									<label for="category_2-1">블랙워크</label>
 								</li>
 								<li>
-									<input class="category_2" type="checkbox" name="category_2[]" id="category_2-2"
+									<input class="category_2" type="checkbox" name="genre" id="genre" onclick='checkOnlyOne1(this)'
 										value="올드스쿨">
 									<label for="category_2-2">올드스쿨</label>
 								</li>
 								<li>
-									<input class="category_2" type="checkbox" name="category_2[]" id="category_2-3"
+									<input class="category_2" type="checkbox" name="genre" id="genre" onclick='checkOnlyOne1(this)'
 										value="뉴스쿨">
 									<label for="category_2-3">뉴스쿨</label>
 								</li>
 								<li>
-									<input class="category_2" type="checkbox" name="category_2[]" id="category_2-4"
+									<input class="category_2" type="checkbox" name="genre" id="genre" onclick='checkOnlyOne1(this)'
 										value="레터링">
 									<label for="category_2-4">레터링</label>
 								</li>
 								<li>
-									<input class="category_2" type="checkbox" name="category_2[]" id="category_2-5"
+									<input class="category_2" type="checkbox" name="genre" id="genre" onclick='checkOnlyOne1(this)'
 										value="미니타투">
 									<label for="category_2-5">미니타투</label>
 								</li>
 								<li>
-									<input class="category_2" type="checkbox" name="category_2[]" id="category_2-6"
+									<input class="category_2" type="checkbox" name="genre" id="genre" onclick='checkOnlyOne1(this)'
 										value="일러스트">
 									<label for="category_2-6">일러스트</label>
 								</li>
 								<li>
-									<input class="category_2" type="checkbox" name="category_2[]" id="category_2-7"
+									<input class="category_2" type="checkbox" name="genre" id="genre" onclick='checkOnlyOne1(this)'
 										value="수채화">
 									<label for="category_2-7">수채화</label>
 								</li>
 								<li>
-									<input class="category_2" type="checkbox" name="category_2[]" id="category_2-8"
+									<input class="category_2" type="checkbox" name="genre" id="genre" onclick='checkOnlyOne1(this)'
 										value="라인워크">
 									<label for="category_2-8">라인워크</label>
 								</li>
 								<li>
-									<input class="category_2" type="checkbox" name="category_2[]" id="category_2-11"
+									<input class="category_2" type="checkbox" name="genre" id="genre" onclick='checkOnlyOne1(this)'
 										value="커버업">
 									<label for="category_2-11">커버업</label>
 								</li>
@@ -223,93 +238,78 @@
 						
 							<p class="bh fs-18 fw-b mb-5">주제</p>
 							<ul>
-								<li>
-									<input class="category_3-all" type="checkbox" name="category_3" id="category_3-all"
-										value="전체" checked>
-									<label for="category_3-all">모든주제</label>
+							<li>
+									<input class="category_3" type="checkbox" name="subject" id="subject" onclick='checkOnlyOne2(this)'
+										value="없음">
+									<label for="category_3-0">없음</label>
 								</li>
 								<li>
-									<input class="category_3" type="checkbox" name="category_3[]" id="category_3-0"
+									<input class="category_3" type="checkbox" name="subject" id="subject" onclick='checkOnlyOne2(this)'
 										value="꽃">
 									<label for="category_3-0">꽃</label>
 								</li>
 								<li>
-									<input class="category_3" type="checkbox" name="category_3[]" id="category_3-1"
+									<input class="category_3" type="checkbox" name="subject" id="subject" onclick='checkOnlyOne2(this)'
 										value="고래">
 									<label for="category_3-1">고래</label>
 								</li>
 								<li>
-									<input class="category_3" type="checkbox" name="category_3[]" id="category_3-2"
+									<input class="category_3" type="checkbox" name="subject" id="subject" onclick='checkOnlyOne2(this)'
 										value="장미">
 									<label for="category_3-2">장미</label>
 								</li>
 								<li>
-									<input class="category_3" type="checkbox" name="category_3[]" id="category_3-3"
+									<input class="category_3" type="checkbox" name="subject" id="subject" onclick='checkOnlyOne2(this)'
 										value="맹수">
 									<label for="category_3-3">맹수</label>
 								</li>
 								<li>
-									<input class="category_3" type="checkbox" name="category_3[]" id="category_3-4"
+									<input class="category_3" type="checkbox" name="subject" id="subject" onclick='checkOnlyOne2(this)'
 										value="나침반">
 									<label for="category_3-4">나침반</label>
 								</li>
 								<li>
-									<input class="category_3" type="checkbox" name="category_3[]" id="category_3-5"
+									<input class="category_3" type="checkbox" name="subject" id="subject" onclick='checkOnlyOne2(this)'
 										value="뱀">
 									<label for="category_3-5">뱀</label>
 								</li>
 								<li>
-									<input class="category_3" type="checkbox" name="category_3[]" id="category_3-6"
+									<input class="category_3" type="checkbox" name="subject" id="subject" onclick='checkOnlyOne2(this)'
 										value="인물">
 									<label for="category_3-6">인물</label>
 								</li>
 								<li>
-									<input class="category_3" type="checkbox" name="category_3[]" id="category_3-7"
+									<input class="category_3" type="checkbox" name="subject" id="subject" onclick='checkOnlyOne2(this)'
 										value="커플">
 									<label for="category_3-7">커플</label>
 								</li>
 								<li>
-									<input class="category_3" type="checkbox" name="category_3[]" id="category_3-8"
+									<input class="category_3" type="checkbox" name="subject" id="subject" onclick='checkOnlyOne2(this)'
 										value="용">
 									<label for="category_3-8">용</label>
 								</li>
 								<li>
-									<input class="category_3" type="checkbox" name="category_3[]" id="category_3-9"
+									<input class="category_3" type="checkbox" name="subject" id="subject" onclick='checkOnlyOne2(this)'
 										value="반려동물">
 									<label for="category_3-9">반려동물</label>
 								</li>
 								<li>
-									<input class="category_3" type="checkbox" name="category_3[]" id="category_3-10"
+									<input class="category_3" type="checkbox" name="subject" id="subject" onclick='checkOnlyOne2(this)'
 										value="종교">
 									<label for="category_3-10">종교</label>
 								</li>
 								<li>
-									<input class="category_3" type="checkbox" name="category_3[]" id="category_3-11"
-										value="만다라">
-									<label for="category_3-11">만다라</label>
-								</li>
-								<li>
-									<input class="category_3" type="checkbox" name="category_3[]" id="category_3-12"
-										value="한야">
-									<label for="category_3-12">한야</label>
-								</li>
-								<li>
-									<input class="category_3" type="checkbox" name="category_3[]" id="category_3-13"
+									<input class="category_3" type="checkbox" name="subject" id="subject" onclick='checkOnlyOne2(this)'
 										value="해골">
 									<label for="category_3-13">해골</label>
 								</li>
 								<li>
-									<input class="category_3" type="checkbox" name="category_3[]" id="category_3-14"
-										value="동양철학">
-									<label for="category_3-14">동양철학</label>
-								</li>
-								<li>
-									<input class="category_3" type="checkbox" name="category_3[]" id="category_3-15"
+									<input class="category_3" type="checkbox" name="subject" id="subject" onclick='checkOnlyOne2(this)'
 										value="다크">
 									<label for="category_3-15">다크</label>
 								</li>
 								<li>
-									<input class="category_3" type="checkbox" name="category_3[]" id="category_3-16"
+									<input class="category_3" type="checkbox" name="subject" id="subject" onclick='checkOnlyOne2(this)'
 										value="가족">
 									<label for="category_3-16">가족</label>
 								</li>
@@ -321,140 +321,98 @@
 							<p class="bh fs-18 fw-b mb-5">부위</p>
 							<ul>
 								<li>
-									<input class="category_4-all" type="checkbox" name="category_4" id="category_4-all"
-										value="전체" checked>
-									<label for="category_4-all">모든부위</label>
-								</li>
-								<li>
-									<input class="category_4" type="checkbox" name="category_4[]" id="category_4-0"
+									<input class="category_4" type="checkbox" name="piece" id="piece" onclick='checkOnlyOne3(this)'
 										value="쇄골">
 									<label for="category_4-0">쇄골</label>
 								</li>
 								<li>
-									<input class="category_4" type="checkbox" name="category_4[]" id="category_4-1"
+									<input class="category_4" type="checkbox" name="piece" id="piece" onclick='checkOnlyOne3(this)'
 										value="팔">
 									<label for="category_4-1">팔</label>
 								</li>
 								<li>
-									<input class="category_4" type="checkbox" name="category_4[]" id="category_4-2"
+									<input class="category_4" type="checkbox" name="piece" id="piece" onclick='checkOnlyOne3(this)'
 										value="가슴">
 									<label for="category_4-2">가슴</label>
 								</li>
 								<li>
-									<input class="category_4" type="checkbox" name="category_4[]" id="category_4-3"
-										value="윗팔">
-									<label for="category_4-3">윗팔</label>
-								</li>
-								<li>
-									<input class="category_4" type="checkbox" name="category_4[]" id="category_4-4"
+									<input class="category_4" type="checkbox" name="piece" id="piece" onclick='checkOnlyOne3(this)'
 										value="어깨">
 									<label for="category_4-4">어깨</label>
 								</li>
 								<li>
-									<input class="category_4" type="checkbox" name="category_4[]" id="category_4-5"
-										value="아래팔">
-									<label for="category_4-5">아래팔</label>
-								</li>
-								<li>
-									<input class="category_4" type="checkbox" name="category_4[]" id="category_4-6"
+									<input class="category_4" type="checkbox" name="piece" id="piece" onclick='checkOnlyOne3(this)'
 										value="옆구리">
 									<label for="category_4-6">옆구리</label>
 								</li>
 								<li>
-									<input class="category_4" type="checkbox" name="category_4[]" id="category_4-7"
+									<input class="category_4" type="checkbox" name="piece" id="piece" onclick='checkOnlyOne3(this)'
 										value="팔꿈치">
 									<label for="category_4-7">팔꿈치</label>
 								</li>
 								<li>
-									<input class="category_4" type="checkbox" name="category_4[]" id="category_4-8"
+									<input class="category_4" type="checkbox" name="piece" id="piece" onclick='checkOnlyOne3(this)'
 										value="골반">
 									<label for="category_4-8">골반</label>
 								</li>
 								<li>
-									<input class="category_4" type="checkbox" name="category_4[]" id="category_4-9"
-										value="긴팔">
-									<label for="category_4-9">긴팔</label>
-								</li>
-								<li>
-									<input class="category_4" type="checkbox" name="category_4[]" id="category_4-10"
+									<input class="category_4" type="checkbox" name="piece" id="piece" onclick='checkOnlyOne3(this)'
 										value="배">
 									<label for="category_4-10">배</label>
 								</li>
 								<li>
-									<input class="category_4" type="checkbox" name="category_4[]" id="category_4-11"
+									<input class="category_4" type="checkbox" name="piece" id="piece" onclick='checkOnlyOne3(this)'
 										value="손목">
 									<label for="category_4-11">손목</label>
 								</li>
 								<li>
-									<input class="category_4" type="checkbox" name="category_4[]" id="category_4-12"
-										value="등판">
-									<label for="category_4-12">등판</label>
-								</li>
-								<li>
-									<input class="category_4" type="checkbox" name="category_4[]" id="category_4-13"
+									<input class="category_4" type="checkbox" name="piece" id="piece" onclick='checkOnlyOne3(this)'
 										value="다리">
 									<label for="category_4-13">다리</label>
 								</li>
+								
 								<li>
-									<input class="category_4" type="checkbox" name="category_4[]" id="category_4-14"
-										value="손가락">
-									<label for="category_4-14">손가락</label>
-								</li>
-								<li>
-									<input class="category_4" type="checkbox" name="category_4[]" id="category_4-15"
-										value="손등">
-									<label for="category_4-15">손등</label>
-								</li>
-								<li>
-									<input class="category_4" type="checkbox" name="category_4[]" id="category_4-16"
+									<input class="category_4" type="checkbox" name="piece" id="piece" onclick='checkOnlyOne3(this)'
 										value="허벅지">
 									<label for="category_4-16">허벅지</label>
 								</li>
 								<li>
-									<input class="category_4" type="checkbox" name="category_4[]" id="category_4-17"
+									<input class="category_4" type="checkbox" name="piece" id="piece" onclick='checkOnlyOne3(this)'
 										value="목">
 									<label for="category_4-17">목</label>
 								</li>
 								<li>
-									<input class="category_4" type="checkbox" name="category_4[]" id="category_4-18"
+									<input class="category_4" type="checkbox" name="piece" id="piece" onclick='checkOnlyOne3(this)'
 										value="종아리">
 									<label for="category_4-18">종아리</label>
 								</li>
+								
 								<li>
-									<input class="category_4" type="checkbox" name="category_4[]" id="category_4-19"
-										value="귀">
-									<label for="category_4-19">귀</label>
-								</li>
-								<li>
-									<input class="category_4" type="checkbox" name="category_4[]" id="category_4-20"
+									<input class="category_4" type="checkbox" name="piece" id="piece" onclick='checkOnlyOne3(this)'
 										value="무릎">
 									<label for="category_4-20">무릎</label>
 								</li>
 								<li>
-									<input class="category_4" type="checkbox" name="category_4[]" id="category_4-21"
+									<input class="category_4" type="checkbox" name="piece" id="piece" onclick='checkOnlyOne3(this)'
 										value="머리">
 									<label for="category_4-21">머리</label>
 								</li>
 								<li>
-									<input class="category_4" type="checkbox" name="category_4[]" id="category_4-22"
+									<input class="category_4" type="checkbox" name="piece" id="piece" onclick='checkOnlyOne3(this)'
 										value="발목">
 									<label for="category_4-22">발목</label>
 								</li>
 								<li>
-									<input class="category_4" type="checkbox" name="category_4[]" id="category_4-23"
+									<input class="category_4" type="checkbox" name="piece" id="piece" onclick='checkOnlyOne3(this)'
 										value="얼굴">
 									<label for="category_4-23">얼굴</label>
 								</li>
 								<li>
-									<input class="category_4" type="checkbox" name="category_4[]" id="category_4-24"
+									<input class="category_4" type="checkbox" name="piece" id="piece" onclick='checkOnlyOne3(this)'
 										value="발">
 									<label for="category_4-24">발</label>
 								</li>
-								<li>
-									<input class="category_4" type="checkbox" name="category_4[]" id="category_4-25"
-										value="눈썹반영구">
-									<label for="category_4-25">눈썹반영구</label>
-								</li>
+								
 							</ul>
 						
 					</div>
@@ -472,13 +430,10 @@
 			<nav class="footer_menu" id="footer_menu">
 				<ul>
 					<li>
-						<a href="/tos"><span>이용약관</span></a>
+						<a href="main.php"><span>이용약관</span></a>
 					</li>
 					<li>
-						<a href="/privacy"><span>개인정보취급방침</span></a>
-					</li>
-					<li>
-						<a href="/board_ecgB46"><span>타투검색</span></a>
+						<a href="main.php"><span>개인정보취급방침</span></a>
 					</li>
 				</ul>
 			</nav>

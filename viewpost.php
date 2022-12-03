@@ -71,10 +71,11 @@ $num = $_GET['num'];
         </div>
     </section>
 <section id="main">
+<form  name="post" action="postProcess.php" method="POST">
         <div class="mainCon">
             <div class="viewTitle"> 제목 : <?= $post['title'] ?></div>
             <div class="viewInfo">
-                <div class="viewName">글쓴이 : <?= $post['name']?></div>
+                <div class="viewName" id="name" value="<?= $post['name']?>">글쓴이 : <?= $post['name']?></div>
                 <div class="viewTime">작성날짜 : <?= $time?></div>
             </div>
             <div class="viewStory">
@@ -88,7 +89,12 @@ $num = $_GET['num'];
             ?><br><br>
         <input type="button" value="상세설명" onclick="div_show();"/>
         <input type="button" value="감추기" onclick="div_hide();"/>
-        <div id="test_div"><?= $post['content']?></div>
+        <input type="button" value="타투이스트 리뷰" onclick="location.href='reviewProcess.php'"/><br><br>
+        <div id="test_div"><?= $post['content']?></div><br>
+        <div>지역 : <?= $post['address']?></div>
+        <div>장르 : <?= $post['genre']?></div>
+        <div>부위 : <?= $post['piece']?></div>
+        <div>주제 : <?= $post['subject']?></div>
             <!-- <?= $post['content']?></div> -->
             </div>
             <div class="viewBtn">
