@@ -110,17 +110,17 @@ session_start();
 						<li><img src="./images/gold.png" alt="gold" width="50px" height="50px">
 							<br>
 							<p></p>
-							<a href="#"><img src="images/TEAM/1.jpg" alt="팀1" width="250px" height="250px"></a>
+							<a href="ranker1.php"><img src="images/TEAM/1.jpg" alt="팀1" width="250px" height="250px"></a>
 						</li>
 						<li><img src="./images/silver.png" alt="silver" width="50px" height="50px">
 
 							<br>
-							<p></p><a href="#"><img src="images/TEAM/2.jpg" alt="팀2" width="250px" height="250px"></a>
+							<p></p><a href="ranker2.php"><img src="images/TEAM/2.jpg" alt="팀2" width="250px" height="250px"></a>
 						</li>
 						<li><img src="./images/bronze.png" alt="bronze " width="50px" height="50px">
 
 							<br>
-							<p></p><a href="#"><img src="images/TEAM/3.jpg" alt="팀3" width="250px" height="250px"></a>
+							<p></p><a href="ranker3.php"><img src="images/TEAM/3.jpg" alt="팀3" width="250px" height="250px"></a>
 						</li>
 					</ul>
 					<p>&nbsp;</p>

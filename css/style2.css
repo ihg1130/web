@@ -70,3 +70,46 @@ div.viewStory {
 .viewBtn a:hover {
     color: white;
 }
+.nbtn {
+    display: flex;
+    margin-top: -25px;
+    margin-left: 485px;
+    cursor: pointer;
+    border: 0;
+    font-weight: bold;
+    font-size: 20px;
+    color: #eee;
+    background-color:#2B2B2B ;
+}
+
+
+.viewBtn2 a:link {
+    color: #eee;
+}
+
+.viewBtn2 a:hover {
+    color: white;
+}
+.viewBtn2 {
+    display: flex;
+    width: 50%;
+    margin-top: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.nbtn:link {
+    color: #eee;
+}
+
+.nbtn:hover {
+    color: white;
+}
+
+div.sur{
+    text-align: left;
+}
+#cal{
+    margin-left: 0px;
+}
+

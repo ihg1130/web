@@ -74,7 +74,7 @@ $num = $_GET['num'];
              if(!$review['image']){
               
             } else{
-                echo "<br><img src='images/$review[image]'></img>";
+                echo "<br><img src='images/$review[image]' width='250px' height='250px'></img>";
             }
             ?>
             </div>

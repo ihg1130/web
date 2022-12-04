@@ -72,7 +72,7 @@ $num = $_GET['num'];
     </section>
 <section id="main">
 <form  name="post" action="postProcess.php" method="POST">
-        <div class="mainCon">
+        <div class="mainCon" id="v">
             <div class="viewTitle"> 제목 : <?= $post['title'] ?></div>
             <div class="viewInfo">
                 <div class="viewName" id="name" value="<?= $post['name']?>">글쓴이 : <?= $post['name']?></div>
@@ -84,21 +84,21 @@ $num = $_GET['num'];
              if(!$post['image']){
               
             } else{
-                echo "<br><img src='images/$post[image]'></img>";
+                echo "<br><img src='images/$post[image]' width='450px' height='450px'></img>";
             }
             ?><br><br>
-        <input type="button" value="상세설명" onclick="div_show();"/>
-        <input type="button" value="감추기" onclick="div_hide();"/>
-        <input type="button" value="타투이스트 리뷰" onclick="location.href='reviewProcess.php'"/><br><br>
-        <div id="test_div"><?= $post['content']?></div><br>
-        <div>지역 : <?= $post['address']?></div>
-        <div>장르 : <?= $post['genre']?></div>
-        <div>부위 : <?= $post['piece']?></div>
-        <div>주제 : <?= $post['subject']?></div>
+        <!-- <input type="button" value="상세설명" onclick="div_show();"/>
+        <input type="button" value="감추기" onclick="div_hide();"/> -->
+       <div id="test_div"><?= $post['content']?></div><br>
+        <div class="sur">지역 : <?= $post['address']?></div>
+        <div class="sur">장르 : <?= $post['genre']?></div>
+        <div class="sur">부위 : <?= $post['piece']?></div>
+        <div class="sur">주제 : <?= $post['subject']?></div>
             <!-- <?= $post['content']?></div> -->
-            </div>
-            <div class="viewBtn">
-                <a href="post.php">목록으로</a>&nbsp;&nbsp;
+            
+            <div class="viewBtn2">
+                <a href="post.php" id="cal">목록으로</a>&nbsp;&nbsp;
+                
                 <?php if($post['id'] != $_SESSION['id']){
                     } else{
                 ?>
@@ -108,6 +108,7 @@ $num = $_GET['num'];
                 </div>
                 <?php } ?>
             </div>
+            <input type="button" class="nbtn" value="타투이스트 리뷰" onclick="location.href='reviewProcess.php'"/>
         </div>
     </section>
     <footer></footer>
