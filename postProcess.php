@@ -59,6 +59,7 @@ $sql -> execute();
                 <thead>
                     <tr>
                         <td class="reviewTd1">번호</td>
+                        <td class="reviewTd5">사진</td>
                         <td class="reviewTd2">제목</td>
                         <td class="reviewTd3">글쓴이</td>
                         <td class="reviewTd4">작성시간</td>
@@ -74,6 +75,7 @@ $sql -> execute();
                     <tbody>
                         <tr>
                             <td class="reviewTd1"><?= $post['num']?></td>
+                            <td class="reviewTd5"><img src='images/<?= $post['num']?>.jpg' width='50px'></td>
                             <td class="reviewTd2"><a href="viewpost.php?num=<?= $post['num']?>"><?= $post['title']?></a></td>
                             <td class="reviewTd3"><?= $post['name']?></td>
                             <td class="reviewTd4"><?= $time?></td>

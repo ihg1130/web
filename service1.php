@@ -107,6 +107,9 @@ function checkOnlyOne3(element) {
 									<input class="category_1" type="checkbox" name="address" id="addreess" onclick='checkOnlyOne(this)'
 										value="경기북부">
 									<label for="category_1-5">경기북부</label>
+									</td><td><input class="category_1" type="checkbox" name="address" id="addreess" onclick='checkOnlyOne(this)'
+										value="서울">
+									<label for="category_1-1">서울</label>
 									</td>
 									<td>
 									<input class="category_1" type="checkbox" name="address" id="addreess" onclick='checkOnlyOne(this)'
@@ -130,12 +133,12 @@ function checkOnlyOne3(element) {
 									<input class="category_1" type="checkbox" name="address" id="addreess" onclick='checkOnlyOne(this)'
 										value="전북">
 									<label for="category_1-10">전북</label></td>
-									<td>
+									</tr>
+								<tr><td>
 									<input class="category_1" type="checkbox" name="address" id="addreess" onclick='checkOnlyOne(this)'
 										value="전남">
 									<label for="category_1-11">전남</label></td>
-									</tr>
-								<tr><td>
+									<td>
 									<input class="category_1" type="checkbox" name="address" id="addreess" onclick='checkOnlyOne(this)'
 										value="충북">
 									<label for="category_1-12">충북</label></td><td>
@@ -153,7 +156,7 @@ function checkOnlyOne3(element) {
 									<label for="category_1-17">광주</label></td><td>
 									<input class="category_1" type="checkbox" name="address" id="addreess" onclick='checkOnlyOne(this)'
 										value="강원">
-									<label for="category_1-18">강원</label></td><td colspan="2">
+									<label for="category_1-18">강원</label></td><td>
 									<input class="category_1" type="checkbox" name="address" id="addreess" onclick='checkOnlyOne(this)'
 										value="제주도">
 									<label for="category_1-20">제주도</label></td>
