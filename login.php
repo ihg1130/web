@@ -53,9 +53,6 @@
                 <input type="text" name="id" id="id" placeholder="아이디를 입력해 주세요">
                 <label for="pw">비밀번호</label>
                 <input type="text" name="pw" id="pw" placeholder="비밀번호를 입력해 주세요">
-                <label for="type">회원 구별</label><br>
-                <input type="radio" name="type" id="type" value="tattooist" checked /><a>타투이스트</a>&nbsp;
-                <input type="radio" name="type" id="type" value="noraml" /><a>일반 회원</a>
                 <ul>
                     <li><a href="findid.php">아이디찾기</a></li>
                     <li><a href="findpw.php">비밀번호찾기</a></li>

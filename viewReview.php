@@ -69,12 +69,13 @@ $num = $_GET['num'];
                 <div class="viewTime">작성날짜 : <?= $time?></div>
             </div>
             <div class="viewStory">
+            <div text-align="center"> 타투이스트 : 혜은 </div><br>
             <?= $review['content']?>
             <?php
              if(!$review['image']){
               
             } else{
-                echo "<br><img src='images/$review[image]' width='250px' height='250px'></img>";
+                echo "<br><img src='images/$review[image]' width='250px' height='350px'></img>";
             }
             ?>
             </div>

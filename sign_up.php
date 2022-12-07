@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js" integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous"></script>
-        <script>src="script1.js"</script>
+        <script src="./script/script.js"></script>
     	<link rel="stylesheet" href="css/style.css">
         <script>
         function checkid() {
@@ -47,12 +47,12 @@
             <div class="w-50 ml-auto mr-auto mt-5">
             <div class="mb-3 ">
                     <label for="id" class="form-label">아이디<br></label>
-                    <input type="id" name="id" class="form-control" placeholder="영어 소문자, 숫자만 가능(4~12자리, 소문자로 시작해야함)"> 
+                    <input type="id" name="id" class="form-control" placeholder="영어 소문자, 숫자만 가능(5~16자리, 소문자로 시작해야함)"> 
                     <input type="button" class="kkk" value="중복확인" onclick="checkid()">
                 </div>
                 <div class="mb-3 ">
                     <label for="pw" class="form-label">비밀번호<br></label>
-                    <input name="pw" type="pw" class="form-control" placeholder="비밀번호는 숫자/문자/특수문자(*!&) 포함 형태의 8~15자리">
+                    <input name="pw" type="pw" class="form-control" placeholder="숫자/문자/특수문자(~.!@#$%^*) 포함 형태의 8~15자리">
                 </div>
                 <div class="mb-3 ">
                     <label for="pw_confirm" class="form-label">비밀번호 확인<br></label>
@@ -64,15 +64,15 @@
                 </div>
                 <div class="mb-3 ">
                     <label for="phone" class="form-label">전화번호<br></label>
-                    <input type="phone" name="phone" class="form-control" placeholder="예)01012345678">
+                    <input type="phone" name="phone" class="form-control" placeholder="예)010-1234-5678">
                 </div>
                 <div class="mb-3 ">
                     <label for="address" class="form-label">주소<br></label>
-                    <input type="address" name="address" class="form-control" placeholder="예)oo시 oo구">
+                    <input type="address" name="address" class="form-control" placeholder="예)ㅇㅇ시 ㅇㅇ구">
                 </div>
                 <div class="mb-3 ">
                     <label for="email" class="form-label">이메일<br></label>
-                    <input type="emial" name="email" class="form-control" placeholder="예)asd123@naver.com">
+                    <input type="emial" name="email" class="form-control" placeholder="예)example@example.com">
                 </div>
                 <div class="mb-3 ">
                     <label for="tattoo" class="form-label">회원 구별<br></label><br>
@@ -81,7 +81,7 @@
                 </div><br><br>
                 
                 <div align="center">
-                    <input type="submit" class="kkkk" value="회원가입">
+                    <input type="submit" class="kkkk" value="회원가입" onclick="submitFormRegist()">
                     <input type="reset" class="kkkk" value="다시입력">
             </div> 
         </div>

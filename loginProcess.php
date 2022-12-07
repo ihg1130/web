@@ -5,7 +5,6 @@ error_reporting( E_ALL );
 
   $id=$_POST['id'];
   $pw=$_POST['pw'];
-  $type=$_POST['type'];
 
   $host = "localhost";
   $user = "root";

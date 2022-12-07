@@ -3,11 +3,6 @@
     
 }
 
-#main{
-    width: 100%;
-    background: url(../images/88.jpg) no-repeat center cover;
-    position: relative;
-}
 .viewTitle {
     margin-top: 50px;
     margin-bottom: 20px;
@@ -45,8 +40,9 @@ div.viewStory {
     margin-top: 20px;
     margin-left: 350px;
     width: 40%;
-    height: 700px;
+    height: 600px;
     background-color: #eee;
+    
 }
 
 .viewStory img {
