@@ -55,8 +55,8 @@ $sql -> execute();
                 </thead>
                 <?php
                     while ($review = $sql -> fetch()){
-                ?> 
-                <?php
+                
+                
                 $time = DateTime::createFromFormat('Y-m-d H:i:s', $review['r_date']);
                 $time = date_format($time, 'Y-m-d');
                 ?>
@@ -78,7 +78,7 @@ $sql -> execute();
                         </tr>
                     </tfoot>
             </table>
-            <div class="writeReview"><a href="writeReview.php" id="guull" >글작성</a></div>
+            <div class="writeReview"><a href="writeReview.php" id="guull">글작성</a></div>
         </div>
     </section>
     <footer></footer>

@@ -52,7 +52,7 @@ session_start();
 						<!-- <a href="#"><img src="images/jj.jpg" alt="메인이미지1"></a>
 						<a href="#"><img src="images/ka.jpg" alt="메인이미지2"></a>
 						<a href="#"><img src="images/yy.jpg" alt="메인이미지3"></a> -->
-						<img onmouseover="m1(this)" onmouseout="m2(this)" onclick="m3(this)" src="images/jj.jpg"
+						<img onmouseover="m1(this)" onmouseout="m2(this)" onclick="m3(this)" src="images/20.jpg"
 							alt="갈색초록색변경" />
 					</div>
 				</div>
@@ -155,7 +155,7 @@ session_start();
 		}
 
 		function m2(leaf) {
-			leaf.setAttribute('src', 'images/yy.jpg');
+			leaf.setAttribute('src', 'images/20.jpg');
 		}
 		function m3(leaf) {
 			leaf.setAttribute('src', 'images/ka.jpg');

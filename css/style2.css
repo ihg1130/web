@@ -1,7 +1,13 @@
 * {
     color: black;
+    
 }
 
+#main{
+    width: 100%;
+    background: url(../images/88.jpg) no-repeat center cover;
+    position: relative;
+}
 .viewTitle {
     margin-top: 50px;
     margin-bottom: 20px;
