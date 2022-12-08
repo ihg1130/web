@@ -63,10 +63,10 @@ $num = $_GET['num'];
     </section>
 <section id="main">
         <div class="mainCon" id="v">
-            <div class="viewTitle"> 제목 : <?= $review['title'] ?></div>
+            <div class="viewTitle"> 제목 : <?= $review['title'] ?></div><br><hr>&nbsp;<br>
             <div class="viewInfo">
                 <div class="viewName">글쓴이 : <?= $review['name']?></div>
-                <div class="viewTime">작성날짜 : <?= $time?></div>
+                <div class="viewTime">작성날짜 : <?= $time?></div><br>
             </div>
             <div class="viewStory">
             <?= $review['content']?>
@@ -79,7 +79,7 @@ $num = $_GET['num'];
             ?>
             </div>
             <div class="viewBtn">
-                <a href="review.php">목록으로</a>&nbsp;&nbsp;
+                <br><a href="review.php" id="cal">목록으로</a>&nbsp;&nbsp;
                 <?php if($review['id'] != $_SESSION['id']){
                     } else{
                 ?>

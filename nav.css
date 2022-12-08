@@ -1,0 +1,234 @@
+.container {
+  height: 100%;
+  background-color: #2B2B2B;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: "돋움체", dotum, "굴림체", gulim;
+  background-color: #2B2B2B;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+
+}
+#guull{
+  color: white;
+  background-color: black;
+  border: solid;
+  font-size: 23px;
+  
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  border: 0;
+}
+
+.cf:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.wrap2 {
+  width: 100%;
+  margin: 0 auto;
+  height: 120px;
+
+  background: url(../images/1174.png)  ;
+  z-index: 999;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/* header */
+#header {
+  width: 100%;
+  text-align: center;
+}
+
+#header .logo {
+  width: 300px;
+  height: 100px;
+  float: left;
+}
+
+#header .nav {
+  float: right;
+  width: 1100px;
+
+}
+
+#header .nav ul {
+  width: 1000px;
+}
+
+#header .nav>ul>li {
+  float: left;
+  width: 20%;
+  position: relative;
+  margin-top: 40px;
+}
+
+#header .nav>ul>li>a {
+  font-weight: bold;
+}
+
+#header .nav a {
+  font-size: 20px;
+  display: block;
+  color: white;
+  cursor: pointer;
+}
+
+#header .nav li {
+  height: 40px;
+  line-height: 40px;
+}
+
+#header .mainmenu {
+  width: 500px;
+}
+
+#header .nav>ul>li:hover>a {
+  background: rgb(21, 19, 24);
+  color: white;
+}
+
+#main {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 50px;
+  color: white;
+}
+
+#main button {
+  display: block;
+    width: 160px;
+    height: 40px;
+    margin: 0 auto;
+    border: solid;
+    background: black;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+a.two:hover,
+a.three:hover,
+a.four:hover,
+a.five:hover,
+a.six:hover {
+  text-decoration: underline;
+}
+
+
+
+
+input.btnn {
+  /* display: block; */
+  width: 110px;
+  height: 50px;
+  margin-top: 50px;
+  background: black;
+  color: #eee;
+  font-size: 25px;
+  border: solid;
+  font-weight: bold;
+  
+  cursor: pointer;
+}
+
+table.updateTable {
+
+  margin-left: 800px;
+
+}
+
+td.textleft {
+  text-align: left;
+
+}
+
+input.sboxbtn {
+
+  width: 60px;
+    height: 40px;
+    margin-top: -30px;
+    background: black;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: solid;
+    cursor: pointer;
+}
+
+input.sboxbtn:hover {
+  color: white;
+}
+
+table.reviewTable {
+  background-color: #eee;
+  color: black;
+}
+
+a.ggll {
+  color: white;
+}
+
+#v.mainCon {
+  margin: 0 auto;
+}
+
+a.guull {
+  width: 50px;
+  height: 30px;
+  margin-top: 30px;
+  font-size: 20px;
+  color: white;
+}
+
+td.textleft{
+  margin-bottom: 50px;
+}
+input.pww{
+  height: 23px;
+}
+body{
+  width: 100%;
+  height: 100%;
+  background: url(../images/1174.png)  ;
+  position: relative;
+
+}
+a.mmm{
+  margin-top: 3px;
+  background: black;
+  color: white;
+  font-size: 20px;
+  border: solid;
+  font-weight: bold;
+  
+  cursor: pointer;
+}
+input.qqqq{
+  height: 25px;
+  font-size: 20px;
+}

@@ -1,0 +1,93 @@
+.reviewTitle{
+    width: fit-content;
+    height: 35px;
+    margin: auto;
+    /* margin-left: 400px; */
+    margin-top: 80px;
+    text-align: center;
+    font-size: 30px;
+    /* border-bottom: 2px solid #34495e; */
+}
+
+.reviewTable{
+    margin: auto;
+    margin-top: 40px;
+    text-align: center;
+    /* border-top: 2px solid #34495e;
+    border-bottom: 2px solid #34495e; */
+}
+.reviewTable td{
+    padding: 2px;
+    border-bottom: 1px solid black;
+}
+
+/* .reviewTable a:link{
+    color: white;
+} */
+
+.reviewTable a:hover{
+    color: #3498db;
+}
+
+.reviewTable thead td{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.reviewTable tbody .reviewTd1{
+    width: 5%;
+    font-size: 22px;
+}
+
+.reviewTable tbody .reviewTd2{
+    width: 40%;
+    text-align: center;
+    font-size: 22px;
+}
+
+.reviewTd2{
+    color:black;
+}
+
+.reviewTable tbody .reviewTd3{
+    width: 10%;
+    font-size: 22px;
+}
+
+.reviewTable tbody .reviewTd4{
+    width: 20%;
+    font-size: 22px;
+}
+
+.reviewTable tfoot td{
+    height: 5px;
+    border: none;
+}
+
+.writeReview{
+    width: 44%;
+    margin-left: 600px;
+    margin-top: 30px;
+    font-size: 20px;
+    text-align: right;
+}
+
+ .writeReview a:visited, .writeReview a:link{
+    
+      margin-top: 30px;
+/*       
+      color: white; */
+      font-size: 20px;
+      font-weight: bold;
+}
+
+.writeReview a:hover{
+    color: white;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background: url(../images/1174.png)  ;
+    position: relative;
+  
+  }
