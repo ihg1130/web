@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js" integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous"></script>
-        <script src="./script/script.js"></script>
+        <script>src="script1.js"</script>
     	<link rel="stylesheet" href="css/style.css">
         <script>
         function checkid() {
@@ -21,23 +21,23 @@
                 <div id="header" class="cf">
                     <div class="wrap2">
                         <div class="logo">
-                            <a href="main.php"><img src="images/logo.png" alt="로고"></a>
+                            <a href="main.php"><img src="images/logo2.png" alt="로고"></a>
                         </div>
                         <div class="nav">
-                            <ul class="mainmenu">
-                                <li><a class="two">SERVICES</a></li>
-                                <li><a class="three">PORTFOLIO</a></li>
-                                <li><a class="four">ARTIST</a></li>
-                                <?php if(!isset($_SESSION['id'])){
-                                echo "<li><a href='login.php'>LOGIN</a></li>";
-                                }
-                                else{
-                                echo"<li><a href='logoutProcess.php'>로그아웃</a></li>";
-                                }
-                                ?>
-                                
-                            </ul>
-                        </div>
+						<ul class="mainmenu">
+                        <li><a href="service1.php" class="two">SERVICES</a></li>
+                            <li><a href="post.php" class="three">PORTFOLIO</a></li>
+                            <li><a href="ranker1.php" class="four">ARTIST</a></li>
+							<?php if (!isset($_SESSION['id'])) {
+	                            echo "<li><a class='five' href='login.php'>LOGIN</a></li>";
+                            } else {
+	                            echo "<li><a class='five' href='logoutProcess.php'>LOGOUT</a></li>";
+	                            echo "<li><a class='five' href='update.php'>MY PAGE</a></li>";
+                            }
+                            ?>
+						</ul>
+						</ul>
+					</div>
                     </div>
                 </div>
             </div>
@@ -47,12 +47,12 @@
             <div class="w-50 ml-auto mr-auto mt-5">
             <div class="mb-3 ">
                     <label for="id" class="form-label">아이디<br></label>
-                    <input type="id" name="id" class="form-control" placeholder="영어 소문자, 숫자만 가능(5~16자리, 소문자로 시작해야함)"> 
+                    <input type="id" name="id" class="form-control" placeholder="영어 소문자, 숫자만 가능(4~12자리, 소문자로 시작해야함)"> 
                     <input type="button" class="kkk" value="중복확인" onclick="checkid()">
                 </div>
                 <div class="mb-3 ">
                     <label for="pw" class="form-label">비밀번호<br></label>
-                    <input name="pw" type="pw" class="form-control" placeholder="숫자/문자/특수문자(~.!@#$%^*) 포함 형태의 8~15자리">
+                    <input name="pw" type="pw" class="form-control" placeholder="비밀번호는 숫자/문자/특수문자(*!&) 포함 형태의 8~15자리">
                 </div>
                 <div class="mb-3 ">
                     <label for="pw_confirm" class="form-label">비밀번호 확인<br></label>
@@ -64,15 +64,15 @@
                 </div>
                 <div class="mb-3 ">
                     <label for="phone" class="form-label">전화번호<br></label>
-                    <input type="phone" name="phone" class="form-control" placeholder="예)010-1234-5678">
+                    <input type="phone" name="phone" class="form-control" placeholder="예)01012345678">
                 </div>
                 <div class="mb-3 ">
                     <label for="address" class="form-label">주소<br></label>
-                    <input type="address" name="address" class="form-control" placeholder="예)ㅇㅇ시 ㅇㅇ구">
+                    <input type="address" name="address" class="form-control" placeholder="예)oo시 oo구">
                 </div>
                 <div class="mb-3 ">
                     <label for="email" class="form-label">이메일<br></label>
-                    <input type="emial" name="email" class="form-control" placeholder="예)example@example.com">
+                    <input type="emial" name="email" class="form-control" placeholder="예)asd123@naver.com">
                 </div>
                 <div class="mb-3 ">
                     <label for="tattoo" class="form-label">회원 구별<br></label><br>
@@ -81,7 +81,7 @@
                 </div><br><br>
                 
                 <div align="center">
-                    <input type="submit" class="kkkk" value="회원가입" onclick="submitFormRegist()">
+                    <input type="submit" class="kkkk" value="회원가입">
                     <input type="reset" class="kkkk" value="다시입력">
             </div> 
         </div>

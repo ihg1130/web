@@ -63,13 +63,13 @@ function checkOnlyOne3(element) {
             <div id="header" class="cf">
                 <div class="wrap2">
                     <div class="logo">
-                        <a class="one" href="main.php"><img src="images/logo.png" alt="로고"></a>
+                        <a class="one" href="main.php"><img src="images/logo2.png" alt="로고"></a>
                     </div>
                     <div class="nav">
                         <ul class="mainmenu">
-                            <li><a class="two">SERVICES</a></li>
-                            <li><a class="three">PORTFOLIO</a></li>
-                            <li><a class="four">ARTIST</a></li>
+						<li><a href="service1.php" class="two">SERVICES</a></li>
+                            <li><a href="post.php" class="three">PORTFOLIO</a></li>
+                            <li><a href="ranker1.php" class="four">ARTIST</a></li>
                             <?php if(!isset($_SESSION['id'])){
                                 echo "<li><a class='five' href='login.php'>LOGIN</a></li>";
                                 }
@@ -89,13 +89,13 @@ function checkOnlyOne3(element) {
 			<div class="tool_header_wrap">
 				<a href="#" class="act_btn_back" onclick="history.go(-1);return false;" alt="뒤로가기"><span><i
 							class="xi-angle-left"></i></span></a>
-				<span class="bh_title">맞춤검색</span>
+				<span class="bh_title" style="font-size: 35px; font-weight: bold;">맞춤검색</span><br>&nbsp;<hr>
 			</div>
 			<form  name="post" action="postProcess.php" method="POST">
             <input type="hidden" name="userid" value="post">
 				    <div class="bh bh_view">
 						<br>
-						<p class="bh fs-18 fw-b mb-5">지역</p>
+						<p class="bh fs-18 fw-b mb-5" style="font-size: 25px; font-weight: bold;">지역</p>
 						<br>
 						<table border="2">
 								<tr><td>
@@ -165,7 +165,7 @@ function checkOnlyOne3(element) {
 					</div>
 					<div class="bh row_group">
 						<br><br>
-							<p class="bh fs-18 fw-b mb-5">장르</p><br>
+							<p class="bh fs-18 fw-b mb-5" style="font-size: 25px; font-weight: bold;">장르</p><br>
 							<table border="2">
 								<tr><td>
 									<input class="category_2" type="checkbox" name="genre" id="genre" onclick='checkOnlyOne1(this)'
@@ -211,7 +211,7 @@ function checkOnlyOne3(element) {
 					</div>
 					<div class="bh row_group">
 						<br><br>
-							<p class="bh fs-18 fw-b mb-5">주제</p><br>
+							<p class="bh fs-18 fw-b mb-5" style="font-size: 25px; font-weight: bold;">주제</p><br>
 							<table border="2">
 							<tr><td>
 									<input class="category_3" type="checkbox" name="subject" id="subject" onclick='checkOnlyOne2(this)'
@@ -266,7 +266,7 @@ function checkOnlyOne3(element) {
 					</div>
 					<div class="bh row_group">
 						<br><br>
-							<p class="bh fs-18 fw-b mb-5">부위</p>
+							<p class="bh fs-18 fw-b mb-5" style="font-size: 25px; font-weight: bold;">부위</p>
 							<br><table border="2">
 								<tr><td>
 									<input class="category_4" type="checkbox" name="piece" id="piece" onclick='checkOnlyOne3(this)'
@@ -338,14 +338,7 @@ function checkOnlyOne3(element) {
 	<footer class="footer4">
 		<div class="bh_wrap">
 			<nav class="footer_menu" id="footer_menu">
-				<ul>
-					<li>
-						<a href="main.php"><span>이용약관</span></a>
-					</li>
-					<li>
-						<a href="main.php"><span>개인정보취급방침</span></a>
-					</li>
-				</ul>
+				
 			</nav>
 			<div class="bh_row ai-c">
 				<p>

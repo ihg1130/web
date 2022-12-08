@@ -29,13 +29,13 @@ session_start();
 			<div id="header" class="cf">
 				<div class="wrap">
 					<div class="logo">
-						<a class="one" href="main.php"><img src="images/logo.png" alt="로고"></a>
+						<a class="one" href="main.php"><img src="images/logo2.png" alt="로고"></a>
 					</div>
 					<div class="nav">
 						<ul class="mainmenu">
-							<li><a class="two">SERVICES</a></li>
-							<li><a class="three">PORTFOLIO</a></li>
-							<li><a class="four">ARTIST</a></li>
+						<li><a href="service1.php" class="two">SERVICES</a></li>
+                            <li><a href="post.php" class="three">PORTFOLIO</a></li>
+                            <li><a href="ranker1.php" class="four">ARTIST</a></li>
 							<?php if (!isset($_SESSION['id'])) {
 	                            echo "<li><a class='five' href='login.php'>LOGIN</a></li>";
                             } else {
@@ -66,16 +66,16 @@ session_start();
 				<div class="cont1">
 					<h1><a>SERVICES</a></h1>
 					<p>&nbsp;</p>
-					<p>타투라이프의 다양 서비스를 만나보세요</p>
+					<p style="font-size:18px;">타투라이프의 다양 서비스를 만나보세요</p>
 					<div class="cf" id="tb">
 						<a href="service1.php"><img src="images/상세검색.jpg" alt="상세검색"></a>
-						<h4 class="text1">상세검색</h4>
+						<a href="service1.php" class="text1">상세검색</a>
 						<a href="review.php"><img src="images/yky.jpg" alt="테마검색"></a>
-						<h4 class="text2">타투 리뷰보기</h4>
+						<a href="review.php" class="text2">타투 리뷰보기</a>
 						<a href="https://www.modoodoc.com/hospitals/?search_query=%EB%AC%B8%EC%8B%A0%EC%A0%9C%EA%B1%B0"><img src="images/피부과.jpg" alt="병원리뷰"></a>
-						<h4 class="text3">병원리뷰</h4>
+						<a href="https://www.modoodoc.com/hospitals/?search_query=%EB%AC%B8%EC%8B%A0%EC%A0%9C%EA%B1%B0" class="text3">병원리뷰</a>
 						<a href="https://open.kakao.com/o/sYAQpgRe"><img src="images/1k.jpg" alt="광고문의"></a>
-						<h4 class="text4">광고문의</h4>
+						<a href="https://open.kakao.com/o/sYAQpgRe" class="text4">광고문의</a>
 					</div>
 				</div>
 	</section>
@@ -86,7 +86,7 @@ session_start();
 				<div class="cont2">
 					<h1><a>PORTFOLIO</a></h1>
 					<p>&nbsp;</p>
-					<p>인기있는 도안을 만나보세요</p>
+					<p style="font-size:18px;">인기있는 도안을 만나보세요</p>
 					<ul class="cf">
 						<li><a href="viewpost.php?num=1"><img src="images/1.jpg" alt="포폴1"></a></li>
 						<li><a href="viewpost.php?num=2"><img src="images/2.jpg" alt="포폴2"></a></li>
@@ -105,27 +105,27 @@ session_start();
 				<div class="cont3">
 					<h1><a>ARTIST</a></h1>
 					<p>&nbsp;</p>
-					<p>2022년 11월 추천 타투 아티스트를 만나보세요</p>
+					<p style="font-size:18px;">2022년 11월 추천 타투 아티스트를 만나보세요</p>
 					<ul class="cf">
 						<li><img src="./images/gold.png" alt="gold" width="50px" height="50px">
 							<br>
 							<p></p>
-							<a href="ranker1.php"><img src="images/TEAM/1.jpg" alt="팀1" width="250px" height="250px"></a>
+							<a href="ranker1.php"><img src="images/TEAM/1.jpg" alt="팀1" width="350px" height="350px"></a>
 						</li>
 						<li><img src="./images/silver.png" alt="silver" width="50px" height="50px">
 
 							<br>
-							<p></p><a href="ranker2.php"><img src="images/TEAM/2.jpg" alt="팀2" width="250px" height="250px"></a>
+							<p></p><a href="ranker2.php"><img src="images/TEAM/2.jpg" alt="팀2" width="350px" height="350px"></a>
 						</li>
 						<li><img src="./images/bronze.png" alt="bronze " width="50px" height="50px">
 
 							<br>
-							<p></p><a href="ranker3.php"><img src="images/TEAM/3.jpg" alt="팀3" width="250px" height="250px"></a>
+							<p></p><a href="ranker3.php"><img src="images/TEAM/3.jpg" alt="팀3" width="350px" height="350px"></a>
 						</li>
 					</ul>
 					<p>&nbsp;</p>
 					<p>&nbsp;</p>
-					<p id="j">최근 한달간의 자료를 바탕으로 제작된 통계입니다.</p>
+					<p id="j" style="font-size:15px;">최근 한달간의 자료를 바탕으로 제작된 통계입니다.</p>
 				</div>
 			</div>
 

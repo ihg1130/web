@@ -13,13 +13,13 @@
             <div id="header" class="cf">
                 <div class="wrap2">
                     <div class="logo">
-                        <a class="one" href="main.php"><img src="images/logo.png" alt="로고"></a>
+                        <a class="one" href="main.php"><img src="images/logo2.png" alt="로고"></a>
                     </div>
                     <div class="nav">
                         <ul class="mainmenu">
-                            <li><a class="two">SERVICES</a></li>
-                            <li><a class="three">PORTFOLIO</a></li>
-                            <li><a class="four">ARTIST</a></li>
+                        <li><a href="service1.php" class="two">SERVICES</a></li>
+                            <li><a href="post.php" class="three">PORTFOLIO</a></li>
+                            <li><a href="ranker1.php" class="four">ARTIST</a></li>
                             <?php if(!isset($_SESSION['id'])){
                                 echo "<li><a class='five' href='login.php'>LOGIN</a></li>";
                                 }
@@ -35,15 +35,15 @@
     </section>
 <section id="main">
         <div class="mainCon">
-            <div class="registerTitle">비밀번호 변경</div>
+            <div class="registerTitle" style="font-size: 35px;  font-weight: bold;">비밀번호 변경</div><br><hr><br><br>
             <div class="changePw">
             <form action="member_process.php?mode=changepw" method="post">
                 <input type="hidden" name="id" value="<?= $_GET['id']?>">
-                <p>새 비밀번호 입력 : <input type="pw1"  name="pw1" size="30"></p>
-                <p class="findEmail">새 비밀번호 확인 : <input type="pw2"  name="pw2" size="30"></p>
+                <p>새 비밀번호 입력 : <input type="pw1"  name="pw1" class="qqqq"></p><br>
+                <p class="findEmail">새 비밀번호 확인 : <input type="pw2" class="qqqq" name="pw2"></p><br><br>
                 <div class="findBtn">
-                <input type="submit" value="변경">&nbsp;&nbsp;&nbsp;
-                <input type="button" value="취소" onclick="history.back(1)">
+                <input type="submit" value="변경" class="sboxbtn">&nbsp;&nbsp;&nbsp;
+                <input type="button" value="취소" class="sboxbtn" onclick="history.back(1)">
                 </div>
             </form>
             </div>

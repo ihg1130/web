@@ -25,13 +25,13 @@ $row = $sql -> fetch();
             <div id="header" class="cf">
                 <div class="wrap2">
                     <div class="logo">
-                        <a class="one" href="main.php"><img src="images/logo.png" alt="로고"></a>
+                        <a class="one" href="main.php"><img src="images/logo2.png" alt="로고"></a>
                     </div>
                     <div class="nav">
                         <ul class="mainmenu">
-                            <li><a class="two">SERVICES</a></li>
-                            <li><a class="three">PORTFOLIO</a></li>
-                            <li><a class="four">ARTIST</a></li>
+                            <li><a href="service1.php" class="two">SERVICES</a></li>
+                            <li><a href="post.php" class="three">PORTFOLIO</a></li>
+                            <li><a href="ranker1.php" class="four">ARTIST</a></li>
                             <?php if(!isset($_SESSION['id'])){
                                 echo "<li><a class='five' href='login.php'>LOGIN</a></li>";
                                 }
@@ -47,7 +47,7 @@ $row = $sql -> fetch();
     </section>
 <section id="main">
         <div class="mainCon">
-            <div class="updateTitle">회원정보</div>
+            <div class="updateTitle" style="font-size: 25px; font-weight: bold;">회원정보</div><br><hr>
             <form action="member_process.php?mode=update" method="post" id="bo">
                 <input type="hidden" name="id" value="<?= $row['id']?>">
                 <table class="updateTable">
@@ -56,20 +56,35 @@ $row = $sql -> fetch();
                         <td><?= $row['id'] ?></td>
                     </tr>
                     <tr>
+                        <td><br></td>
+                    </tr>
+                    <tr>
                         <td class="textleft">비밀번호</td>
-                        <td><input type="password" name="pw1"></td>
+                        <td>&nbsp;<input type="password" name="pw1" class="pww"></td>
+                    </tr>
+                    <tr>
+                        <td><br></td>
                     </tr>
                     <tr>
                         <td class="textleft">비밀번호 확인</td>
-                        <td><input type="password" name="pw2"></td>
+                        <td>&nbsp;<input type="password" name="pw2"class="pww"></td>
+                    </tr>
+                    <tr>
+                        <td><br></td>
                     </tr>
                     <tr>
                         <td class="textleft">전화번호</td>
-                        <td><input type="text" name="phone" placeholder=<?= $row['phone']?>></td>
+                        <td>&nbsp;<input type="text" name="phone"  class="pww" placeholder=<?= $row['phone']?>></td>
+                    </tr>
+                    <tr>
+                        <td><br></td>
                     </tr>
                     <tr>
                         <td class="textleft">이메일</td>
                         <td><?= $row['email'] ?></td>
+                    </tr>
+                    <tr>
+                        <td><br></td>
                     </tr>
                     <tr>
                         <td class="textleft">회원정보</td>
@@ -78,7 +93,7 @@ $row = $sql -> fetch();
                     </tr>
                 </table>
                 <div class="updateBtn" id="upbtn">
-                <input type="submit" value="수정" class="btnn">
+                <input type="submit" value="수정" class="btnn">&nbsp;&nbsp;&nbsp;
                 <input type="button" value="취소" onclick="history.back(1)" class="btnn">
                 </div>
             </form>

@@ -65,9 +65,11 @@ else{
 
         $sql = $db -> prepare("UPDATE member set pw=:pw, phone=:phone WHERE id=:id");
         $sql -> bindParam("pw",$pw1);
-        $sql -> bindParam("phone",$phone);
+        $sql -> bindParam("phone",$tel);
         $sql -> bindParam("id",$id);
      
+        // $sql1 =$db -> prepare("SELECT * from member as m join post as p on m.userid=:p.userid");
+        // $sql1 -> execute();
 
         if(!$pw1 || !$pw2){
             errMsg("비밀번호를 입력해주세요.");

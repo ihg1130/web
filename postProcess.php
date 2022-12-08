@@ -32,13 +32,13 @@ $sql -> execute();
             <div id="header" class="cf">
                 <div class="wrap2">
                     <div class="logo">
-                        <a class="one" href="main.php"><img src="images/logo.png" alt="로고"></a>
+                        <a class="one" href="main.php"><img src="images/logo2.png" alt="로고"></a>
                     </div>
                     <div class="nav">
                         <ul class="mainmenu">
-                            <li><a class="two">SERVICES</a></li>
-                            <li><a class="three">PORTFOLIO</a></li>
-                            <li><a class="four">ARTIST</a></li>
+                        <li><a href="service1.php" class="two">SERVICES</a></li>
+                            <li><a href="post.php" class="three">PORTFOLIO</a></li>
+                            <li><a href="ranker1.php" class="four">ARTIST</a></li>
                             <?php if(!isset($_SESSION['id'])){
                                 echo "<li><a class='five' href='login.php'>LOGIN</a></li>";
                                 }
@@ -54,7 +54,7 @@ $sql -> execute();
     </section>
 <section id="main">
         <div class="mainCon">
-            <div class="reviewTitle">포트폴리오 보기</div>
+            <div class="reviewTitle">포트폴리오 보기</div><br><hr><br>
             <table class="reviewTable">
                 <thead>
                     <tr>
@@ -91,7 +91,7 @@ $sql -> execute();
                         </tr>
                     </tfoot>
             </table>
-            <div class="writeReview"><a href="writepost.php" id="guull" >글쓰기</a></div>
+            <div class="writeReview"><a href="writepost.php" id="guull"  >글쓰기</a></div>
         </div>
     </section>
     <footer></footer>

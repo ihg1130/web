@@ -71,11 +71,38 @@
    font-size: 16px;
 }
     </style>
+ <link rel="stylesheet" href="css/write.css">
+ <link rel="stylesheet" href="css/nav.css">
 </head>
 <body>
-<section>
+<section class="scroll s-one" data-section-name="s-one">
+        <div class="container">
+            <div id="header" class="cf">
+                <div class="wrap2">
+                    <div class="logo">
+                        <a class="one" href="main.php"><img src="images/logo2.png" alt="로고"></a>
+                    </div>
+                    <div class="nav">
+                        <ul class="mainmenu">
+                        <li><a href="service1.php" class="two">SERVICES</a></li>
+                            <li><a href="post.php" class="three">PORTFOLIO</a></li>
+                            <li><a href="ranker1.php" class="four">ARTIST</a></li>
+                            <?php if(!isset($_SESSION['id'])){
+                                echo "<li><a class='five' href='login.php'>LOGIN</a></li>";
+                                }
+                                else{
+                                echo"<li><a class='five' href='logoutProcess.php'>LOGOUT</a></li>";
+                                echo"<li><a class='five' href='update.php'>MY PAGE</a></li>";
+                                }
+                                ?></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section id="main">
         <div class="mainCon">
-            <div class="writeTitle">포트폴리오 수정</div>
+            <div class="writeTitle">포트폴리오 수정</div><br><hr>
             <form class="writeForm" action="board_process.php?mode=update1" method="post" enctype= "multipart/form-data">
                 <input type="hidden" name="userid" value="post">
                 <input type="hidden" name="num" value="<?= $post['num']?>">
@@ -83,6 +110,7 @@
                 <input type="hidden" name="name" value="<?= $_SESSION['name'] ?>">
                 <p><input class="writeTypeText" type="text" name="title" size="50" value="<?= $post['title']?>" required></p>
                 <textarea class="writeTextarea" name="content" required><?= $post['content']?></textarea><br>
+                <br>
                 <div class="select">지역 : 
                 <select class="select1" name="address" id="address">
                     <option value="서울">서울</option>
@@ -104,11 +132,11 @@
                 </select>&nbsp;
                 장르 :
                 <select class="select1" name="genre" id="genre">
-                    <option value="이레즈미">이레즈미</option>
+                    <option value="이레즈미">레터링</option>
                     <option value="블랙워크">블랙워크</option>
                     <option value="올드스쿨">올드스쿨</option>
                     <option value="뉴스쿨">뉴스쿨</option>
-                    <option value="레터링">레터링</option>
+                    <option value="레터링">이레즈미</option>
                     <option value="미니타투">미니타투</option>
                     <option value="일러스트">일러스트</option>
                     <option value="수채화">수채화</option>
@@ -155,13 +183,13 @@
                 </div><br>
                 <?php if(!$post['image']){
                     } else{ ?>
-                    현재 파일: <?= $post['image']?><br>
-                <?php } ?><br>
+                   <div style="font-size: 16px;">현재 파일:<?= $post['image']?></div>
+                <?php } ?>
                 <input type="file" name="image" value="<?=$post['image']?>">
                 <div class="imageExp">jpg, jpeg, gif, png 파일만 사용가능 </div>
-                <div class="writeBtn">
-                <input type="submit" value="수정">&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="button" value="취소" onclick="history.back(1)">
+                <div class="writeBtn" id="oooo">
+                <input type="submit" value="수정" class="btnn">&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="button" value="취소" class="btnn" onclick="history.back(1)">
                 </div>
             </form>
         </div>

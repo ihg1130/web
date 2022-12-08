@@ -15,7 +15,17 @@ body {
 
 a {
   text-decoration: none;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+
+}
+#guull{
   color: white;
+  background-color: black;
+  border: solid;
+  font-size: 23px;
+  
 }
 
 li {
@@ -37,7 +47,7 @@ img {
   margin: 0 auto;
   height: 120px;
 
-  background: #2B2B2B;
+  background: url(../images/1174.png)  ;
   z-index: 999;
 }
 
@@ -84,6 +94,7 @@ body {
   font-size: 20px;
   display: block;
   color: white;
+  cursor: pointer;
 }
 
 #header .nav li {
@@ -109,15 +120,15 @@ body {
 
 #main button {
   display: block;
-  width: 220px;
-  height: 50px;
-  margin: 0 auto;
-  /* 블록요소가 부모 영역에서 가운데 오기 */
-  border: none;
-  background-color: #eee;
-  color: black;
-  font-size: 14px;
-  font-weight: bold;
+    width: 160px;
+    height: 40px;
+    margin: 0 auto;
+    border: solid;
+    background: black;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 a.two:hover,
@@ -136,12 +147,13 @@ input.btnn {
   width: 110px;
   height: 50px;
   margin-top: 50px;
-  background-color: #eee;
-  color: black;
-  font-size: 14px;
+  background: black;
+  color: #eee;
+  font-size: 25px;
+  border: solid;
   font-weight: bold;
-  border: none;
-
+  
+  cursor: pointer;
 }
 
 table.updateTable {
@@ -151,20 +163,21 @@ table.updateTable {
 }
 
 td.textleft {
-  text-align: center;
+  text-align: left;
+
 }
 
 input.sboxbtn {
 
-  width: 50px;
-  height: 30px;
-  margin-top: -30px;
-  background-color: #eee;
-  color: black;
-  font-size: 14px;
-  font-weight: bold;
-  border: none;
-
+  width: 60px;
+    height: 40px;
+    margin-top: -30px;
+    background: black;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: solid;
+    cursor: pointer;
 }
 
 input.sboxbtn:hover {
@@ -180,9 +193,8 @@ a.ggll {
   color: white;
 }
 
-#v {
-  margin-left: 330px;
-  margin-bottom: -150px;
+#v.mainCon {
+  margin: 0 auto;
 }
 
 a.guull {
@@ -190,6 +202,33 @@ a.guull {
   height: 30px;
   margin-top: 30px;
   font-size: 20px;
+  color: white;
+}
 
-  border: 1px black;
+td.textleft{
+  margin-bottom: 50px;
+}
+input.pww{
+  height: 23px;
+}
+body{
+  width: 100%;
+  height: 100%;
+  background: url(../images/1174.png)  ;
+  position: relative;
+
+}
+a.mmm{
+  margin-top: 3px;
+  background: black;
+  color: white;
+  font-size: 20px;
+  border: solid;
+  font-weight: bold;
+  
+  cursor: pointer;
+}
+input.qqqq{
+  height: 25px;
+  font-size: 20px;
 }

@@ -13,13 +13,13 @@
             <div id="header" class="cf">
                 <div class="wrap2">
                     <div class="logo">
-                        <a class="one" href="main.php"><img src="images/logo.png" alt="로고"></a>
+                        <a class="one" href="main.php"><img src="images/logo2.png" alt="로고"></a>
                     </div>
                     <div class="nav">
                         <ul class="mainmenu">
-                            <li><a class="two">SERVICES</a></li>
-                            <li><a class="three">PORTFOLIO</a></li>
-                            <li><a class="four">ARTIST</a></li>
+                        <li><a href="service1.php" class="two">SERVICES</a></li>
+                            <li><a href="post.php" class="three">PORTFOLIO</a></li>
+                            <li><a href="ranker1.php" class="four">ARTIST</a></li>
                             <?php if(!isset($_SESSION['id'])){
                                 echo "<li><a class='five' href='login.php'>LOGIN</a></li>";
                                 }
@@ -35,11 +35,11 @@
     </section>
     <section id="main">
         <div class="mainCon" >
-            <div class="registerTitle">아이디 찾기</div><br>
+            <div class="registerTitle" style="font-size: 35px;  font-weight: bold;" >아이디 찾기</div><br><hr><br><br>
             <div class="findIdPw">
             <form action="member_process.php?mode=findid" method="post">
-                <p>이&nbsp;&nbsp; 름 : <input type="text"  name="name" placeholder="이름 입력" size="30" required></p>
-                <p class="findEmail">이메일 : <input type="text"  name="email" placeholder="이메일 입력" size="30" required></p>
+                <p>이&nbsp;&nbsp; 름 : <input type="text" class="qqqq" name="name" placeholder="이름 입력" required></p><br>
+                <p class="findEmail">이메일 : <input type="text" class="qqqq"  name="email" placeholder="이메일 입력" required></p><br>
                 <div class="findBtn">
                     <br>
                 <input type="submit" value="찾기" class="sboxbtn">&nbsp;&nbsp;&nbsp;

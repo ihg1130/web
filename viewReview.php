@@ -41,13 +41,13 @@ $num = $_GET['num'];
             <div id="header" class="cf">
                 <div class="wrap2">
                     <div class="logo">
-                        <a class="one" href="main.php"><img src="images/logo.png" alt="로고"></a>
+                        <a class="one" href="main.php"><img src="images/logo2.png" alt="로고"></a>
                     </div>
                     <div class="nav">
                         <ul class="mainmenu">
-                            <li><a class="two">SERVICES</a></li>
-                            <li><a class="three">PORTFOLIO</a></li>
-                            <li><a class="four">ARTIST</a></li>
+                        <li><a href="service1.php" class="two">SERVICES</a></li>
+                            <li><a href="post.php" class="three">PORTFOLIO</a></li>
+                            <li><a href="ranker1.php" class="four">ARTIST</a></li>
                             <?php if(!isset($_SESSION['id'])){
                                 echo "<li><a class='five' href='login.php'>LOGIN</a></li>";
                                 }
@@ -69,13 +69,12 @@ $num = $_GET['num'];
                 <div class="viewTime">작성날짜 : <?= $time?></div>
             </div>
             <div class="viewStory">
-            <div text-align="center"> 타투이스트 : 혜은 </div><br>
             <?= $review['content']?>
             <?php
              if(!$review['image']){
               
             } else{
-                echo "<br><img src='images/$review[image]' width='250px' height='350px'></img>";
+                echo "<br><img src='images/$review[image]' width='250px' height='250px'></img>";
             }
             ?>
             </div>

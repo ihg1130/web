@@ -14,13 +14,13 @@
             <div id="header" class="cf">
                 <div class="wrap2">
                     <div class="logo">
-                        <a class="one" href="main.php"><img src="images/logo.png" alt="로고"></a>
+                        <a class="one" href="main.php"><img src="images/logo2.png" alt="로고"></a>
                     </div>
                     <div class="nav">
                         <ul class="mainmenu">
-                            <li><a class="two">SERVICES</a></li>
-                            <li><a class="three">PORTFOLIO</a></li>
-                            <li><a class="four">ARTIST</a></li>
+                        <li><a href="service1.php" class="two">SERVICES</a></li>
+                            <li><a href="post.php" class="three">PORTFOLIO</a></li>
+                            <li><a href="ranker1.php" class="four">ARTIST</a></li>
                             <?php if(!isset($_SESSION['id'])){
                                 echo "<li><a class='five' href='login.php'>LOGIN</a></li>";
                                 }
@@ -36,7 +36,7 @@
     </section>
 <section id="main">
         <div class="mainCon">
-        <img src="images/TEAM/3.jpg" alt="팀3" width="250px" height="250px"><br>
+        <img src="images/TEAM/3.jpg" alt="팀3" width="300px" height="300px"><br><br>
             <h2 class="text-uppercase">시엔</h2>
                                 
                                 
@@ -54,7 +54,7 @@ pf.kakao.com/_xlUxjAb<br><br>
                                 <p>
 </p>
                                 
-<div class="writeReview"><a href="main.php" id="guull" >둘러보기</a></div>
+<div class="writeReview"><a href="post.php" id="guull" >둘러보기</a></div>
                                     
                                   
                              

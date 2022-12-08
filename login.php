@@ -23,13 +23,13 @@
             <div id="header" class="cf">
                 <div class="wrap">
                     <div class="logo">
-                        <a href="main.php"><img src="images/logo.png" alt="로고"></a>
+                        <a href="main.php"><img src="images/logo2.png" alt="로고"></a>
                     </div>
                     <div class="nav">
                         <ul class="mainmenu">
-                            <li><a class="two">SERVICES</a></li>
-                            <li><a class="three">PORTFOLIO</a></li>
-                            <li><a class="four">ARTIST</a></li>
+                        <li><a href="service1.php" class="two">SERVICES</a></li>
+                            <li><a href="post.php" class="three">PORTFOLIO</a></li>
+                            <li><a href="ranker1.php" class="four">ARTIST</a></li>
                             <?php if(!isset($_SESSION['id'])){
                                 echo "<li><a class='five' href='login.php'>LOGIN</a></li>";
                                 }
@@ -53,6 +53,9 @@
                 <input type="text" name="id" id="id" placeholder="아이디를 입력해 주세요">
                 <label for="pw">비밀번호</label>
                 <input type="text" name="pw" id="pw" placeholder="비밀번호를 입력해 주세요">
+                <label for="type">회원 구별</label><br>
+                <input type="radio" name="type" id="type" value="tattooist" checked /><a>타투이스트</a>&nbsp;
+                <input type="radio" name="type" id="type" value="noraml" /><a>일반 회원</a>
                 <ul>
                     <li><a href="findid.php">아이디찾기</a></li>
                     <li><a href="findpw.php">비밀번호찾기</a></li>
